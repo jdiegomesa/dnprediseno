@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inicio | Departamento Nacional de Planeación</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fin Google Fonts -->
+  <link rel="stylesheet" href="./css/dnp_styles.css">
+  <link rel="stylesheet" href="./css/dnp_gifs.css">
+</head>
+<body>
+  <main role="main">
+    
+    <!-- Slider -->
+   <section class="DNPSlider" style="--slidercolor: #fff; --slidertextcolor: #333;">
+      <h2 class="hidden">Información destacada</h2>
+      <div class="DNPSlider-container" id="DNPSliderHome" data-position="1">
+        <!-- Slide -->
+        <a href="https://www.dnp.gov.co/Paginas/Inversiones-por-$130-000-millones-para-potenciar-desarrollo-turistico-y-social-de-Mompox.aspx">
+          <div class="DNPSlider-element DNPSliderHome-element">
+             <div class="DNPSlider-element-info">
+              <p class="DNPSlider-element-info-title">Inversión histórica en vías terciarias en el Golfo de Morrosquillo</p>
+              <p class="DNPSlider-element-info-text">En una medida dirigida a afianzar la reactivación económica, el Gobierno nacional asignó $47.193 millones para la rehabilitación de vías terciarias en los departamentos de Sucre y Córdoba.</p>
+            </div>
+            <picture>
+              <!-- Imagen móvil -->
+              <source 
+                srcset="./img/slide2-mobile.png"
+                media="(max-width: 600px)"
+              />
+              <!-- Imagen de escritorio -->
+              <source 
+                srcset="./img/slide2-desktop.png"
+                media="(min-width: 600px)"
+              />
+              <img class="DNPSlider-element-image"
+                 src="img/slide2-desktop.png" alt="Paisaje Golfo de Morrosquillo"
+                >
+            </picture>
+          </div>
+        </a>
+        <!-- Slide -->
+        <div class="DNPSlider-element DNPSliderHome-element">
+          <div class="DNPSlider-element-info">
+            <p class="DNPSlider-element-info-title">Inversión histórica en vías terciarias en el Golfo de Morrosquillo</p>
+            <p class="DNPSlider-element-info-text">En una medida dirigida a afianzar la reactivación económica, el Gobierno nacional asignó $47.193 millones para la rehabilitación de vías terciarias en los departamentos de Sucre y Córdoba.</p>
+            <div class="DNPButtonscontainer">
+              <a href="#" class="DNPSimplebutton DNPSimplebutton-color">Un enlace</a>
+              <a href="#" class="DNPSimplebutton">Otro enlace</a>
+            </div>
+          </div>
+          <picture>
+            <!-- Imagen móvil -->
+            <source 
+              srcset="./img/slide2-mobile.png"
+              media="(max-width: 600px)"
+            />
+            <!-- Imagen de escritorio -->
+            <source 
+              srcset="./img/slide2-desktop.png"
+              media="(min-width: 600px)"
+            />
+            <img class="DNPSlider-element-image"
+                src="img/slide2-desktop.png" alt="Paisaje Golfo de Morrosquillo"
+              >
+          </picture>
+        </div>
+        <!-- Slide -->
+        <div class="DNPSlider-element DNPSliderHome-element">
+          <picture>
+            <source 
+              srcset="./img/slide1-mobile.png"
+              media="(max-width: 600px)"
+            />
+            <source 
+              srcset="./img/slide1-desktop.png"
+              media="(min-width: 600px)"
+            />
+            <img class="DNPSlider-element-image" src="img/slide1-desktop.png" alt="Paisaje Golfo de Morrosquillo" >
+          </picture>
+        </div>
+      </div>
+      <div class="DNPSlider-buttons">
+          <!-- Botón atrás del slider -->
+          <button class="DNPSlider-buttons-button" aria-label="Ir a slider anterior" onclick="DNPprevSlide('DNPSliderHome');">
+            <img src="./assets/down-blue-arrow.svg" alt="Flecha a la izquierda">
+          </button>
+          <div class="DNPSlider-buttons-dots">
+            <!-- Botones del slider: se debe renderizar uno por cada elemento existente y cambiar el número que se envía como parámetro en la función -->
+            <button class="DNPSlider-buttons-dots-element DNPSliderHome-dot active" aria-label="Ir a slider número 1" onclick="DNPgotoSlide('DNPSliderHome', 1);"></button>
+            <button class="DNPSlider-buttons-dots-element DNPSliderHome-dot" aria-label="Ir a slider número 2" onclick="DNPgotoSlide('DNPSliderHome', 2);"></button>
+            <button class="DNPSlider-buttons-dots-element DNPSliderHome-dot" aria-label="Ir a slider número 3" onclick="DNPgotoSlide('DNPSliderHome', 3);"></button>
+          </div>    
+         <!-- Botón de pausa del slider -->
+         <button class="DNPSlider-buttons-play" id="DNPpauseButton" aria-label="Reproducir/Pausar slider" onclick="DNPsliderPlay('DNPSliderHome', 'DNPSliderHome-element', 'DNPpauseButton', 5000);">
+           <img class="play" src="./assets/slider_play.svg" alt="Ícono de reproducir">
+           <img class="pause" src="./assets/slider_pause.svg" alt="Ícono de pausar">
+         </button>
+          <!-- Botón siguiente del slider -->
+         <button class="DNPSlider-buttons-button" aria-label="Ir a slider siguiente" onclick="DNPnextSlide('DNPSliderHome');">
+           <img src="./assets/down-blue-arrow.svg" alt="Flecha a la derecha">
+         </button>
+      </div>
+     
+    </section>
+    <!-- FIN Slider -->
+
+  </main>
+
+  <script type="text/javascript" src="./js/dnp_scripts.js"></script>
+
+
+
+</body>
+</html>

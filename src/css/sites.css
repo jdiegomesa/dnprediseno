@@ -1,0 +1,89 @@
+.DNPSites{
+  width: 1280px;
+  margin: 0 auto;
+  padding: var(--fuente4) 0 var(--fuente1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  @media(--tablet){
+    width: 85vw;
+    padding: 2vw 0;
+  }
+  @media(--mobile){
+    width: 90vw;
+  }
+  &-arrow{
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 35px;
+    cursor: pointer;
+    transition: .5s;
+    @media(--tablet){
+      width: 2.5vw;
+    }
+    @media(--mobile){
+      width: 5vw;
+    }
+    &:hover, &:active{
+      background-color: transparent;
+      transform: scale(1.1);
+    }
+    & img{
+      width: 100%;
+    }
+    &:first-of-type > img{
+      transform: rotate(90deg);
+    }
+    &:last-of-type > img{
+      transform: rotate(-90deg);
+    }
+  }
+  &-window{
+    width: 1185px;
+    overflow-x: hidden;
+    @media(--tablet){
+      width: 84.64vw;
+    }
+    @media(--mobile){
+      width: 80vw;
+    }
+  }
+  &-elements{
+    width: max-content;
+    overflow-y: hidden;
+    transition-duration: .5s;
+    &-item{
+      width: 180px;
+      padding: 0 7px;
+      transition-duration: .5s;
+      will-change: transform;
+      box-sizing: content-box;
+      &:hover{
+        transform: scale(1.02);
+      }
+      @media(--tablet){
+        width: 12vw;
+        padding: 0 .5vw;
+      }
+      @media(--mobile){
+        width: 35vw;
+        padding: 0 2vw;
+      }
+      &-logo{
+        object-fit: contain;
+        width: 180px;
+        height: 85px;
+        @media(--tablet){
+          width: 12vw;
+          height: 6.07vw;
+        }
+        @media(--mobile){
+          width: 35vw;
+          height: 17vw;
+        }
+      }
+    }
+  }
+}

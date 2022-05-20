@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>XXXX | Departamento Nacional de Planeación</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fin Google Fonts -->
+  <!-- Hojas de estilos DNP -->
+  <link rel="stylesheet" href="./css/dnp_styles.css">
+  <!-- FIN Hojas de estilos DNP -->
+</head>
+<body>
+  <main role="main">
+    <!-- Sidebar -->
+    <aside class="DNPSidebar">
+      <!-- Componente de búsqueda -->
+      <div class="DNPSearch">
+        <div class="DNPSearch-item">
+          <label for="yearSearch" class="DNPSearch-item-label">Buscar por año</label>
+          <select name="year" id="yearSearch" class="DNPSearch-item-select">
+            <option disabled selected value></option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+          </select>
+        </div>
+        <div class="DNPSearch-item">
+          <label for="monthSearch" class="DNPSearch-item-label">Buscar por mes</label>
+          <select name="month" id="monthSearch" class="DNPSearch-item-select">
+            <option disabled selected value></option>
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
+            <option value="Mayo">Mayo</option>
+          </select>
+        </div>
+        <div class="DNPSearch-item">
+          <label for="keywordSearch" class="DNPSearch-item-label">Buscar por palabra clave</label>
+          <input type="text" name="keyword" id="keywordSearch" class="DNPSearch-item-input">
+        </div>
+        <div class="DNPButtonscontainer">
+          <button class="DNPSimplebutton DNPSimplebutton-color">Buscar</button>
+          <button class="DNPSimplebutton">Limpiar filtro</button>
+        </div>
+      </div>
+      <!-- FIN Componente de búsqueda -->
+      <!-- Texto enriquecido destacado propio del contenido o transversal al subsitio -->
+     <iframe src="https://widget.spreaker.com/player?show_id=5465339&amp;theme=light&amp;playlist=show&amp;cover_image_url=https%3A%2F%2Fd1bm3dmew779uf.cloudfront.net%2Fcover%2F7ffd455d17b4a139b576a1a0cc01b76f.jpg" width="100%" height="400px" frameborder="0" data-uw-styling-context="true"></iframe>
+      <!-- Ultimo contenido destacado en el home -->
+      <a href="#URL">
+        <img src="./img/ejemplo-especial.jpg" alt="" class="DNPImagefull">
+      </a>
+    </aside>
+    <!-- FIN Sidebar -->
+  </main>
+
+<script type="text/javascript" src="./js/dnp_scripts.js"></script>
+
+
+
+</body>
+</html>

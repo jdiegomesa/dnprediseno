@@ -1,0 +1,40 @@
+.DNPPager{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+  width: 100%;
+  max-width: 1280px;
+  @media(--tablet){
+    padding: 2.5vw 0;
+    max-width: 90vw;
+  }
+  @media(--mobile){
+    max-width: 90vw;
+    padding: 5vw 0;
+  }
+  &-prev, &-next{
+    width: 120px;
+    margin: 0 var(--fuente0);
+    text-align: center;
+    @media(--tablet){
+      width: 8.6vw;
+      margin: 0 var(--fuente0_tablet);
+    }
+    @media(--mobile){
+      width: 30vw;
+      margin: 0 var(--fuente0_mobile);
+    }
+    & a{
+      @mixin text 0, color3;
+      text-decoration: underline;
+      &:hover{
+        color: var(--color2);
+      }
+    }
+  }
+  &-numbers{
+    @mixin text 0, color3;
+    margin: 0;
+  }
+}

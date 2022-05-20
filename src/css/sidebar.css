@@ -1,0 +1,49 @@
+.DNPSidebar{
+  width: 320px;
+  display: inline-block;
+  vertical-align: top;
+  padding: var(--fuente1) 0 var(--fuente3);
+  @media(--tablet){
+    width: 27vw;
+    padding: var(--fuente1_tablet) 0 var(--fuente3_tablet);
+  }
+  @media(--mobile){
+    width: 90vw;
+    display: block;
+    padding: var(--fuente1_mobile) 0 var(--fuente3_mobile);
+    margin: 0 auto;
+  }
+  &-banner{
+    width: 100%;
+  }
+  &-outstanding{
+    &-title{
+      font-family: var(--fuentedestacada);
+      font-weight: var(--bold);
+      color: var(--color1);
+      font-size: 27px;
+      padding: 20px 0;
+      @media(--tablet){
+        padding: 1.8vw 0;
+        font-size: 2.2vw;
+      }
+      @media(--mobile){
+        padding: 3vw 0;
+        font-size: 6vw;
+      }
+    }
+    &-image{
+      width: 100%;
+      margin-bottom: 20px;
+      @media(--tablet){
+        margin-bottom: 1.8vw;
+      }
+      @media(--desktop){
+        margin-bottom: 3vw;
+      }
+    }
+  }
+  &>h2, &>h3, &>h4{
+    margin-bottom: var(--fuente2);
+  }
+}

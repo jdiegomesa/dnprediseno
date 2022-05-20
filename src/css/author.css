@@ -1,0 +1,81 @@
+.DNPAuthor{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  &-picture{
+    width: 100px;
+    border-radius: 50%;
+    margin: 15px 0;
+    height: 100px;
+    object-fit: cover;
+    @media(--tablet){
+      width: 7.1vw;
+      height: 7.1vw;
+      margin: 1.1vw 0;
+    }
+    @media(--mobile){
+      width: 25vw;
+      height: 25vw;
+      margin: 3.7vw 0;
+    }
+  }
+  &-info{
+    padding-left: 20px;
+    line-height: 0;
+    @media(--tablet){
+      padding-left: 1.5vw;
+    }
+    @media(--mobile){
+      padding-left: 5vw;
+    }
+    &-name, p&-name{
+      font-family: var(--fuente);
+      font-weight: var(--regular);
+      color: var(--color3);
+      font-size: 15px;
+      margin: 0;
+      @media(--tablet){
+        font-size: 1.1vw;
+      }
+      @media(--mobile){
+        font-size: 3.7vw;
+      }
+      & span{
+        font-weight: var(--bold);
+      }
+    }
+    &-position, p&-position{
+      font-family: var(--fuente);
+      font-weight: var(--regular);
+      color: var(--color3);
+      padding: 4px 0;
+      font-size: 12.8px;
+      margin: 0;
+      @media(--tablet){
+        padding: .3vw 0;  
+        font-size: .9vw;
+      }
+      @media(--mobile){
+        padding: 1vw 0;
+        font-size: 3.2vw;
+      }
+    }
+    &-date, p&-date{
+      font-family: var(--fuente);
+      font-weight: var(--regular);
+      color: var(--gris);
+      padding: 4px 0;
+      font-size: 12.8px;
+      margin: 0;
+      @media(--tablet){
+        padding: .3vw 0;
+        font-size: .9vw;
+      }
+      @media(--mobile){
+        padding: 1vw 0;
+        font-size: 3.2vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>XXXX | Departamento Nacional de Planeación</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fin Google Fonts -->
+  <!-- Hojas de estilos DNP -->
+  <link rel="stylesheet" href="./css/dnp_styles.css">
+  <!-- FIN Hojas de estilos DNP -->
+</head>
+<body>
+ <!-- Header -->
+  <header class="DNPHeader" id="DNPheader">
+    <div class="DNPHeader-bar">
+      <div class="DNPHeader-container">
+        <a href="https://www.gov.co/" target="_blank">
+          <img src="./assets/logo_govco.svg" alt="Logo Gov.co" class="DNPHeader-bar-logo" />
+        </a>
+      </div>
+    </div>
+    <div class="DNPHeader-brand">
+      <a href="https://dnp.gov.co" class="DNPHeader-brand-logo">
+        <!-- Logo del DNP -->
+        <img src="https://www.dnp.gov.co/estilos/images/logoNuevo.jpg" alt="Logo Departamento Nacional de Planeación">
+      </a>
+      <div class="DNPHeader-brand-search">
+        <!-- Agregar acción de búsqueda -->
+        <form action="">
+          <label for="buscador_dnp" class="hidden">Buscar en el DNP</label>
+          <input id="buscador_dnp" type="text" size="20" name="keywords" placeholder="Buscar" class="DNPHeader-brand-search-input">
+          <input type="submit" value="Buscar" aria-label="Buscar" class="DNPHeader-brand-search-button">
+        </form>
+      </div>
+    </div>
+  </header>
+  <!-- FIN Header -->
+
+  <!-- Navegacion -->
+  <nav class="DNPNav" id="DNPnav" role="navigation">
+    <!-- Boton abrir menú en móvil -->
+    <button aria-label="Botón Abrir/Cerrar" class="DNPNav-button" onclick="DNPopen('DNPnav');" role="button">
+      <img class="DNPNav-button-open" src="./assets/menu_button.svg" alt="Ícono de menú">
+      <img class="DNPNav-button-close" src="./assets/close_button.svg" alt="Ícono de cerrar">
+    </button>
+    <ul role="menubar" class="DNPNav-menu">
+      <li class="DNPNav-menu-item" id="DNPinicio" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPinicio', 'DNPNav-menu-item');"></div>
+        <a href="./index.html" role="link">Inicio</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+
+      <li class="DNPNav-menu-item" id="DNPtransparencia" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPtransparencia', 'DNPNav-menu-item');"></div>
+        <a href="./transparencia.html" role="link">Transparencia y acceso información pública</a>
+        <ul class="DNPNav-menu-item-submenu" >
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPservicios" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPservicios', 'DNPNav-menu-item');"></div>
+        <a href="./servicio-ciudadania.html" role="link">Atención y servicios a la ciudadanía</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPparticipa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPparticipa', 'DNPNav-menu-item');"></div>
+        <a href="./participa.html">Participa</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPentidad" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPentidad', 'DNPNav-menu-item');"></div>
+        <a href="./entidad.html" role="link">La Entidad</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./directivos.html">Directivos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./direcciones.html">Direcciones</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/misi%C3%B3n-visi%C3%B3n-origen">Misión, Visión, Origen</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/funciones-dnp">Funciones DNP</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/c%C3%B3digo-de-integridad">Código de integridad</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/objetivos">Objetivos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/planeacion-y-gestion-institucional">Planeación y gestión institucional</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/operaciones-recIprocas">Operaciones recíprocas</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/organigrama">Organigrama</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/contrataci%C3%B3n">Contratación</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/desarrollo-del-talento-humano">Desarrollo de talento humano</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/gesti%C3%B3n-documental">Gestión documental</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/participaci%C3%B3n-privada-en-proyectos-de-infraestructura">Participación privada en proyectos de infraestructura</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.datos.gov.co/browse?Informaci%C3%B3n-de-la-Entidad_Nombre-de-la-Entidad=Departamento+Nacional+de+Planeaci%C3%B3n&q=dnp&sortBy=relevance&utf8=%E2%9C%93">Datos abiertos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/factura-electr%C3%B3nica">Factura electrónica</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPnormativa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPnormativa', 'DNPNav-menu-item');"></div>
+        <a role="link" href="./normativa.html">Normativa</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./decreto.html">Decreto único reglamentario 1082 de 26 de mayo 2015</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/proyectos-de-normatividad">Proyectos de normatividad </a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/normograma">Normograma</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.sgr.gov.co/normativa.aspx">Sistema General de Regalías</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/leyes-plan-nacional-de-desarrollo">Leyes Plan Nacional de Desarrollo</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPprensa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPprensa', 'DNPNav-menu-item');"></div>
+        <a href="./prensa.html" role="link">Prensa</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/sala-de-prensa/Paginas/Comunicados.aspx#Default=%7B%22k%22:%22SPContentType:Slider%20de%20Noticias%22,%22o%22:%5B%7B%22d%22:1,%22p%22:%22DNPFechaPublicacion%22%7D%5D%7D">Comunicados</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.flickr.com/photos/142236467@N07/" target="_blank">Imágenes</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://soundcloud.com/redes-planeacion-nacional" target="_blank">Audios</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank">Videos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank">DNP Noticias</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/prensa/presentaciones">Presentaciones</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/prensa/publicaciones">Publicaciones</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+  <!-- FIN Navegacion -->
+
+  <!-- Miga de pan -->
+  <ul class="DNPBread">
+    <li class="DNPBread-element"><a href="./index.html">Inicio</a></li>
+    <li class="DNPBread-element"><a href="index.html">La Entidad</a></li>
+    <li class="DNPBread-element">Dirección General</li>
+  </ul>
+  <!-- FIN Miga de pan -->
+
+  <main role="main">
+    <!-- Menú de tabs -->
+    <section class="DNPNavbutton">
+      <!-- Tabs -->
+      <nav class="DNPNavbutton-menu">
+        <button class="DNPNavbutton-menu-element opened" onclick="DNPopen('navbuttonButton1', 'DNPNavbutton-menu-element'); DNPopen('navbuttonElement1','DNPNavbutton-container-element'); return false" id="navbuttonButton1">Directora General del DNP</button>
+        <button class="DNPNavbutton-menu-element" onclick="DNPopen('navbuttonButton2', 'DNPNavbutton-menu-element'); DNPopen('navbuttonElement2','DNPNavbutton-container-element'); return false" id="navbuttonButton2">​Subdirectora​ general de Prospectiva y Desarrollo Nacional</button>
+        <button class="DNPNavbutton-menu-element" onclick="DNPopen('navbuttonButton3', 'DNPNavbutton-menu-element'); DNPopen('navbuttonElement3','DNPNavbutton-container-element'); return false" id="navbuttonButton3">Subdirector​a General del Sistema General de Regalías</button>
+        <button class="DNPNavbutton-menu-element" onclick="DNPopen('navbuttonButton4', 'DNPNavbutton-menu-element'); DNPopen('navbuttonElement4','DNPNavbutton-container-element'); return false" id="navbuttonButton4">Subdirección General de Descentralización y Desarrollo Territorial</button>
+        <button class="DNPNavbutton-menu-element" onclick="DNPopen('navbuttonButton5', 'DNPNavbutton-menu-element'); DNPopen('navbuttonElement5','DNPNavbutton-container-element'); return false" id="navbuttonButton5">Subdirección General de Inversiones, Seguimiento y Evaluación</button>
+        <button class="DNPNavbutton-menu-element" onclick="DNPopen('navbuttonButton6', 'DNPNavbutton-menu-element'); DNPopen('navbuttonElement6','DNPNavbutton-container-element'); return false" id="navbuttonButton6">Secretaría General</button>
+      </nav>
+      <!-- FIN Tabs -->
+      <div class="DNPNavbutton-container">
+        <!-- Detalle Item 1 -->
+        <section class="DNPPerfil-big DNPNavbutton-container-element opened" id="navbuttonElement1">
+          <div class="DNPPerfil-big-title">
+            <h2 class="DNPPerfil-big-title-name">​​​​Alejandra Botero Barco</h2>
+            <h3 class="DNPPerfil-big-title-position">Directora del Departamento Nacional de Planeación</h3>
+          </div>
+          <img src="https://dnp.gov.co/DNPN/PublishingImages/directivas/direcci%C3%B3n-general/Alejandra%20Botero%20Barco%20directora%20DNP.jpg" alt="" class="DNPPerfil-big-image">
+          <div class="DNPPerfil-big-info">
+            <!-- Texto enriquecido: contenido -->
+            <div class="DNPRichtext">
+              <p>Economista y politóloga de Swarthmore College. Tiene una maestría en Administración de Empresas (MBA) de la Universidad de Columbia (Nueva York).</p>
+              <p>Su experiencia en la banca multilateral en la estructuración y dirección de proyectos de inversión en los sectores público y privado, así como en competitividad, innovación y emprendimiento fueron determinantes durante su desempeño como Consejera Presidencial para la Gestión y el Cumplimiento. Allí, lideró el seguimiento y gestión de las iniciativas transformacionales del presidente Iván Duque, entre las que se destacan la implementación del Catastro Multipropósito, la puesta en marcha del Marco Nacional de Cualificaciones y la lucha contra la deforestación</p>
+              <p>Su actividad profesional ha estado vinculada a organismos internacionales, especialmente al Banco de Desarrollo de América Latina (CAF), donde promovió crédito para cuatro países e impulsó el Programa de Fomento a la Innovación Empresarial.</p>
+              <p>Antes de vincularse a la CAF, Alejandra Botero Barco cofundó y dirigió el Impact Hub Caracas, un espacio de cotrabajo para emprendedores. Laboró en Mckinsey &amp; Company, líder en consultoría gerencial, donde participó en el diseño de proyectos de planeación y de reingeniería de distintos programas de desarrollo, tanto económico como empresarial.</p>
+              <p>En 2019, se vinculó al Gobierno de Colombia y promovió la creación de la Consejería Presidencial para la Gestión y Cumplimiento, así como la transformación de la gestión pública en las regiones, a través de la creación de 16 Unidades de Cumplimiento.</p>
+              <p>Entre distintas misiones que encabezará ahora en la dirección del Departamento Nacional de Planeación, se destacan el fortalecimiento del Sisbén IV y el Catastro Multipropósito, al igual que la consolidación de programas sociales cruciales para el país como el Ingreso Solidario y la Devolución IVA.​​</p>
+            </div>
+            <div class="DNPButtonscontainer">
+              <a href="#" class="DNPSimplebutton DNPSimplebutton-color">Documento a descargar <img src="./assets/download.svg"/></a>
+              <a href="#" class="DNPSimplebutton DNPSimplebutton-color">Documento a descargar <img src="./assets/download.svg"/></a>
+            </div>
+          </div>
+        </section>
+        <!-- FIN Detalle Item 1 -->
+        <!-- Detalle Item 2 -->
+        <section class="DNPPerfil-simple DNPNavbutton-container-element" id="navbuttonElement2">
+          <img src="https://dnp.gov.co/DNPN/PublishingImages/Paginas/Subdireccion-General-de-Prospectiva-y-Desarrollo-Nacional/laura%20pabon.PNG" alt="" class="DNPPerfil-simple-image">
+          <div class="DNPPerfil-simple-info">
+            <h2 class="DNPPerfil-simple-info-name">Laura Pabon​​</h2>
+            <h3 class="DNPPerfil-simple-info-position">​Subdirectora​ general de Prospectiva y Desarrollo Nacional</h3>
+            <!-- Texto enriquecido: contenido -->
+            <div class="DNPRichtext">
+              <p>Economista, con maestría en economía de la Universidad de los Andes y con maestría en Políticas Públicas de la Universidad de Chicago. Trabajó por más de  8 años en el Banco Mundial en temas de mercado laboral, pobreza y protección social para países del Sudeste Asiático y América Latina. También se desempeñó como subdirectora de Educación, Cultura y Deportes, y  lideró la Dirección de Desarrollo Social en el Departamento Nacional de Planeación.</p>
+              <p>En 2020, Laura fue reconocida por la Presidencia de la República y la Función Pública como la mejor servidora pública del país por su liderazgo en el diseño y ejecución de los programas Ingreso Solidario y Devolución del IVA, con los cuales se han entregado ayudas a más de 4 millones de hogares colombianos en condición de vulnerabilidad en el marco de la pandemia del COVID-19.</p>
+            </div>
+             <div class="DNPButtonscontainer">
+              <a href="#" class="DNPSimplebutton DNPSimplebutton-color">Documento a descargar <img src="./assets/download.svg"/></a>
+              <a href="#" class="DNPSimplebutton DNPSimplebutton-color">Documento a descargar <img src="./assets/download.svg"/></a>
+            </div>
+          </div>
+        </section>
+        <!-- FIN Detalle Item 2 -->
+        <!-- Detalle Item 3 -->
+        <section class="DNPPerfil-simple DNPNavbutton-container-element" id="navbuttonElement3">
+          <img src="https://www.dnp.gov.co/DNP/organigrama/Subdireccion-General-del-Sistema-General-Regalias/PublishingImages/Paginas/default/Amparo%20garcia%20Montana.PNG" alt="" class="DNPPerfil-simple-image">
+          <div class="DNPPerfil-simple-info">
+            <h2 class="DNPPerfil-simple-info-name">​​​​Amparo García Montaña​​​</h2>
+            <h3 class="DNPPerfil-simple-info-position">​Subdirector​a General del Sistema General de Regalías</h3>
+            <!-- Texto enriquecido: contenido -->
+            <div class="DNPRichtext">
+              <p>​Nacida en Sogamoso (Boyacá) es administradora pública de la Escuela Superior de Administración Pública (ESAP) con especialización en Finanzas Públicas; se ha desempeñado en el sector público durante 28 años en el Ministerio de Hacienda y Crédito Público como directora encargada de Presupuesto General de la Nación, subdirectora de Infraestructura y jefe de las Divisiones de Finanzas Territoriales, de Minas y Energía y de Desarrollo Económico, y en el Departamento Nacional de Planeación, como directora de Vigilancia a las Regalías. ​ También se desempeño como Subdirectora general Territorial.</p>
+            </div>
+          </div>
+        </section>
+        <!-- FIN Detalle Item 3 -->
+        <!-- Detalle Item 4 -->
+        <section class="DNPPerfil-simple DNPNavbutton-container-element" id="navbuttonElement4">
+          <img src="https://www.dnp.gov.co/DNPN/PublishingImages/Paginas/Subdireccion-General-de-Descentralizacion-y-Desarrollo-Territorial/Lorena%20Garnica.PNG" alt="" class="DNPPerfil-simple-image">
+          <div class="DNPPerfil-simple-info">
+            <h2 class="DNPPerfil-simple-info-name">​​​​Lorena Garnica De la Espriella</h2>
+            <h3 class="DNPPerfil-simple-info-position">​​Subdirector​a General de Descentralización y Desarrollo Territorial</h3>
+            <!-- Texto enriquecido: contenido -->
+            <div class="DNPRichtext">
+              <p>Abogada especialista en Derecho Comercial de la Universidad Javeriana y tiene una maestría en Derecho de los Negocios de la Universidad Francisco de Vitoria (Madrid, España). </p>
+              <p>Durante más de 20 años de trayectoria profesional se ha desempeñado en los sectores privado y público en importantes posiciones como asesora jurídica, consultora especializada en tierras y asesora en instituciones como, por ejemplo, el Departamento Administrativo de la Presidencia de la República, la Agencia de Defensa Jurídica del Estado, el Ministerio de Justicia, el Banco Mundial, CAF, entre otros. ​​​</p>
+            </div>
+          </div>
+        </section>
+        <!-- FIN Detalle Item 4 -->
+        <!-- Detalle Item 5 -->
+        <section class="DNPPerfil-simple DNPNavbutton-container-element" id="navbuttonElement5">
+          <img src="https://www.dnp.gov.co/DNP/organigrama/direccion-general/PublishingImages/Paginas/Direcci%C3%B3n-de-Inversiones-y-Finanzas-P%C3%BAblicas--/Yesid-Parra-DIFP.jpg" alt="" class="DNPPerfil-simple-image">
+          <div class="DNPPerfil-simple-info">
+            <h2 class="DNPPerfil-simple-info-name">Yesid Parra Vera​​</h2>
+            <h3 class="DNPPerfil-simple-info-position">​​Subdirector​ general de Inversiones, Seguimiento y Evaluación</h3>
+            <!-- Texto enriquecido: contenido -->
+            <div class="DNPRichtext">
+              <p>Graduado como economista de la Universidad Nacional de Colombia y con un magíster en Economía de la misma institución. Su vocación y trayectoria de más de 20 años en el servicio público la ha visto como una oportunidad de aportar en la toma de decisiones para transformar la vida de los colombianos con las inversiones y ejecución de las políticas públicas y su rigurosa evaluación. </p>
+              <p>Ha sido anteriormente asesor económico en la Oficina del Consejo Superior de Política Fiscal (CONFIS) y de la Dirección de Política Macroeconómica del Ministerio de Hacienda y Crédito Público, donde aportó su experiencia en la coordinación para la elaboración del Marco Fiscal de Mediano Plazo. Desde 2014 se encuentra vinculado al Departamento Nacional de Planeación para liderar los equipos en la construcción de planes de desarrollo y, posteriormente, la Dirección de Inversiones y Finanzas Públicas.​​​​</p>
+            </div>
+          </div>
+        </section>
+        <!-- FIN Detalle Item 5 -->
+        <!-- Detalle Item 6 -->
+        <section class="DNPPerfil-simple DNPNavbutton-container-element" id="navbuttonElement6">
+          <img src="https://www.dnp.gov.co/DNP/organigrama/PublishingImages/Paginas/Secretaria-General/Diana%20Rios%20SG.jpeg" alt="" class="DNPPerfil-simple-image">
+          <div class="DNPPerfil-simple-info">
+            <h2 class="DNPPerfil-simple-info-name">​​​​Diana Ríos​ García</h2>
+            <h3 class="DNPPerfil-simple-info-position">​Secretaría General​</h3>
+            <!-- Texto enriquecido: contenido -->
+            <div class="DNPRichtext">
+              <p>Abogada con Maestría y Especialización en Derecho Administrativo, y adelanta estudios de Especialización en Derechos Humanos y Derecho Internacional Humanitario (Universidad Externado de Colombia).</p>
+              <p>Con mas de 20 años de experiencia laboral en el Sector Público. Se ha  desempeñado como Secretaria General en la Unidad Nacional de Protección (UNP) y el Instituto Geográfico Agustín Codazzi (IGAC), Directora Legal Ambiental en la Secretaría Distrital de Ambiente (SDA), Asesor en la Agencia Nacional de Infraestructura (ANI) y la Gobernación de Cundinamarca.</p> 
+              <p>Participó como ponente en representación de Colombia (UNP) en la sesión número 174º  de la Comisión Interamericana de Derechos Humanos (CIDH), en Quito, Ecuador, 2019. Actualmente se desempeña como Secretaria General del DNP.​​​​</p>
+            </div>
+          </div>
+        </section>
+        <!-- FIN Detalle Item 6 -->
+      </div>
+    </section>
+    <!-- FIN Menú Tabs -->
+
+  </main>
+   <!-- Footer -->
+  <footer class="DNPFooter" role="contentinfo">
+    <div class="DNPFooter-info">
+      <div class="DNPFooter-info-container">
+        <h2 class="hidden">Pié de página - Más del DNP</h2>
+        <h3 class="DNPFooter-info-title">Departamento Nacional de Planeación</h3>
+        <div class="DNPFooter-info-logos">
+          <img src="https://www.dnp.gov.co/estilos/images/logoNuevo.jpg" alt="Logo Departamento Nacional de Planeación" class="DNPFooter-info-logos-element">
+          <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="Ir a La Rebeca">
+            <img src="./assets/boton_la_rebeca.svg" alt="Logo La Rebeca" class="DNPFooter-info-logos-element">
+          </a>
+        </div>
+        <div class="DNPFooter-info-data">
+          <h4 class="DNPFooter-info-data-title">Sede principal</h4>
+          <p class="DNPFooter-info-data-text">Dirección: Calle 26 # 13-19 - Edificio ENTerritorio / Bogotá D.C., Colombia</p>
+          <p class="DNPFooter-info-data-text">Código Postal: 110311</p>
+          <p class="DNPFooter-info-data-text">Horario de Atención: Lunes a viernes 8:00 a.m. a 4:30 p.m. jornada continua</p>
+          <p class="DNPFooter-info-data-text">Teléfono Conmutador: +57 (1) 381 50 00</p>
+          <p class="DNPFooter-info-data-text">Línea Gratuita: 01 8000 12 12 21</p>
+          <p class="DNPFooter-info-data-text">Buzón de notificaciones DNP: notificacionesjudiciales@dnp.gov.co</p>
+          <p class="DNPFooter-info-data-text"></p>
+        </div>
+        <div class="DNPFooter-info-social">
+          <a href="https://twitter.com/DNP_Colombia" class="DNPFooter-info-social-element tw">@DNP_Colombia</a>
+          <a href="https://www.instagram.com/dnp_colombia/" target="_blank" class="DNPFooter-info-social-element ig">@dnp_colombia</a>
+          <a href="https://www.facebook.com/departamentonacionaldeplaneacion/" target="_blank" class="DNPFooter-info-social-element fb">@DNPColombia</a>
+          <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank" class="DNPFooter-info-social-element yt">DNP Colombia</a>
+          <a href="https://www.linkedin.com/company/departamento-nacional-de-planeacion/" target="_blank" class="DNPFooter-info-social-element in">Departamento Nacional de Planeación</a>
+        </div>
+        <div class="DNPFooter-info-social">
+          <a href="/Politica-de-seguridad/#terminos-y-condiciones" class="DNPFooter-info-social-link">Terminos y condiciones</a>
+          <a href="/Politica-de-seguridad/#politica-de-privacidad" class="DNPFooter-info-social-link">Política de privadicad</a>
+          <a href="/Politica-de-seguridad/#politica-derechos-de-autor" class="DNPFooter-info-social-link">Política de derechos de autor</a>
+          <a href="/mapa-del-sitio" class="DNPFooter-info-social-link">Mapa del sitio</a>
+          <!--<a href="/Accesibilidad" class="DNPFooter-info-social-link">Accesibilidad</a>!-->
+          <a href="/_layouts/15/Authenticate.aspx" class="DNPFooter-info-social-link">Inicio de sesión</a>
+          <a href="https://portal.microsoftonline.com/" class="DNPFooter-info-social-link" target="_blank">Correo institucional</a>
+        </div>
+      </div>
+    </div>
+    <div class="DNPFooter-bar">
+      <div class="DNPFooter-bar-container">
+        <img src="./assets/colombia_co.png" alt="Logo Marca Colombia" class="DNPFooter-bar-logo border">
+        <a href="https://www.gov.co/" target="_blank">
+          <img src="./assets/logo_govco.svg" alt="Logo Gov.co" class="DNPFooter-bar-logo">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- FIN Footer -->
+  <!-- Botón Volver arriba -->
+  <button class="DNPUp" id="DNPUp" onclick="DNPscroll('DNPheader');">
+    <img src="./assets/up-button.svg" alt="Flecha hacia arriba" class="DNPUp-icon">
+    <p class="DNPUp-text">Volver arriba</p>
+  </button>
+  <!-- FIN Botón Volver arriba -->
+
+  <script type="text/javascript" src="./js/dnp_scripts.js"></script>
+
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const directivo = urlParams.get('directivo')
+  switch(directivo){
+    case 'prospectivaydesarrollonacional':
+      DNPopen('navbuttonButton2', 'DNPNavbutton-menu-element'); 
+      DNPopen('navbuttonElement2','DNPNavbutton-container-element');
+      break;
+    case 'sistemageneralderegalias':
+      DNPopen('navbuttonButton3', 'DNPNavbutton-menu-element'); 
+      DNPopen('navbuttonElement3','DNPNavbutton-container-element');
+      break;
+    case 'descentralizacionydesarrolloterritorial':
+      DNPopen('navbuttonButton4', 'DNPNavbutton-menu-element'); 
+      DNPopen('navbuttonElement4','DNPNavbutton-container-element');
+      break;
+    case 'inversionesseguimientoyevaluacion':
+      DNPopen('navbuttonButton5', 'DNPNavbutton-menu-element'); 
+      DNPopen('navbuttonElement5','DNPNavbutton-container-element');
+      break;
+    case 'secretaria':
+      DNPopen('navbuttonButton6', 'DNPNavbutton-menu-element'); 
+      DNPopen('navbuttonElement6','DNPNavbutton-container-element');
+      break;
+    default:
+      console.log('Nada');
+      break;
+  }
+
+</script>
+
+</body>
+</html>

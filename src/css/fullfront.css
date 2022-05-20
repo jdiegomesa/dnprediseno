@@ -1,0 +1,51 @@
+.DNPFullfront{
+  width: 100vw;
+  position: relative;
+  margin-top: var(--fuente0);
+  @media(--tablet){
+    margin-top: var(--fuente0_tablet);
+  }
+  @media(--mobile){
+    margin-top: var(--fuente0_mobile);
+  }
+  &-image{
+    width: 100%;
+    display: block;
+  }
+  &-info{
+    position: absolute;
+    z-index: 10;
+    box-sizing: border-box;
+    padding: 0 50vw 50px 0;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background: var(--color2_75);
+    @media(--tablet){
+      padding-bottom: 3.5vw;
+    }
+    @media(--mobile){
+      padding: 3vw 10vw 10vw 0;
+    }
+    &-title, h1&-title, h2&-title{
+      @mixin title 5, blanco;
+      border-bottom: solid var(--blanco) 6px;
+      padding: 10px 0 10px calc(50vw-640px);
+      margin: 0;
+      @media(--tablet){
+        padding: .7vw 0 .7vw 5vw;
+        border-bottom-width: .5vw;
+      }
+      @media(--mobile){
+        line-height: 1;
+        padding: 2.5vw 0 2.5vw 5vw;
+        border-bottom-width: 1vw;
+      }
+    }
+  }
+}

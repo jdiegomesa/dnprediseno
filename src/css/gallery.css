@@ -1,0 +1,123 @@
+.DNPGallery{
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  @media(--mobile){
+    width: 90vw;
+    margin: 0 auto;
+    padding: 3vw 0;
+  }
+  &-container{
+    display: flex;
+    width: max-content;
+    transition-duration: 1s;
+    will-change: transform;
+    &>a:focus{
+      outline: 5px solid #000;
+      outline-offset: -2px;
+    }
+  }
+  &-element{
+    width: 915px;
+    height: 514px;
+    object-fit: cover;
+    display: block;
+    @media(--tablet){
+      width: 65.3vw;
+      height: 36.7vw;
+    }
+    @media(--mobile){
+      width: 90vw;
+      height: 50.6vw;
+    }
+  }
+  &-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--fuente0) 0 0;
+    @media(--tablet){
+      padding-top: var(--fuente0_tablet);
+    }
+    @media(--mobile){
+      padding-top: var(--fuente0_mobile);
+    }
+    & *{
+      box-sizing: content-box;
+    }
+    &-button{
+      cursor: pointer;
+      width: var(--fuente2);
+      height: var(--fuente2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: 50%;
+      background-color: var(--color1);
+      padding: 5px;
+      @media(--tablet){
+        width: var(--fuente2_tablet);
+        height: var(--fuente2_tablet);
+        padding: .5vw;
+      }
+      @media(--mobile){
+        width: var(--fuente2_mobile);
+        height: var(--fuente2_mobile);
+        padding: 1vw;
+      }
+      & img{
+        height: 90%;
+      }
+    }
+    &-dots{
+      width: max-content;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 35px;
+      padding: 0 var(--fuente2);
+      @media(--tablet){
+        padding: 0 var(--fuente2_tablet);
+      }
+      @media(--mobile){
+        padding: 0 var(--fuente2_mobile);
+      }
+      &-element{
+        cursor: pointer;
+        border: solid 2px var(--color1);
+        border-radius: 50%;
+        margin: 0 var(--fuente-2);
+        width: var(--fuente-2);
+        height: var(--fuente-2);
+        background-color: transparent;
+        &.active{
+          background-color: var(--color1);
+        }
+        @media(--tablet){
+          width: var(--fuente-2_tablet);
+          height: var(--fuente-2_tablet);
+          margin: 0 var(--fuente-2_tablet);
+          border-width: .2vw;
+        }
+        @media(--mobile){
+          width: var(--fuente-2_mobile);
+          height: var(--fuente-2_mobile);
+          margin: 0 var(--fuente-2_mobile);
+          border-width: .7vw;
+        }
+      }
+    }
+  }
+  & input[type=button], & button{
+    &:hover, &:active{
+      background-color: var(--color1) !important;
+    }
+    /* &:focus{
+      outline: inherit;
+    } */
+  }
+}

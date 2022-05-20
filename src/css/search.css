@@ -1,0 +1,57 @@
+.DNPSearch{
+  width: 100%;
+  &-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &-label{
+      @mixin title 0;
+    }
+    &-select{
+      @mixin text;
+      width: 100%;
+      box-sizing: border-box;
+      padding: var(--fuente-2);
+      border-radius: var(--redondeado_sencillo);
+      border: solid 1px var(--grisclaro);
+      background-image:
+        url('./assets/down-blue-arrow.svg');
+      background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - 2.5em) 0.5em;
+      background-size: var(--fuente0);
+      background-repeat: no-repeat;
+      appearance: none;
+      &::-ms-expand{
+          display: none;
+      }
+      @media(--tablet){
+        background-size: var(--fuente0_tablet);
+        padding: var(--fuente-2_tablet);
+      }
+      @media(--mobile){
+        background-size: var(--fuente0_mobile);
+        padding: var(--fuente-2_mobile);
+        border-width: .25vw;
+      }
+    }
+    &-input{
+      @mixin text;
+      width: 100%;
+      box-sizing: border-box;
+      padding: var(--fuente-2);
+      border-radius: var(--redondeado_sencillo);
+      border: solid 1px var(--grisclaro);
+      @media(--tablet){
+        background-size: var(--fuente0_tablet);
+        padding: var(--fuente-2_tablet);
+      }
+      @media(--mobile){
+        background-size: var(--fuente0_mobile);
+        padding: var(--fuente-2_mobile);
+        border-width: .25vw;
+      }
+    }
+  }
+}

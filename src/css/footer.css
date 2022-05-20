@@ -1,0 +1,257 @@
+.DNPFooter{
+  &-info{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    background-image: linear-gradient(to bottom, var(--blanco), var(--blanco) 15%, var(--color1) 15%, var(--color1) 85%, var(--color1) 85%);
+    &-container{
+      position: relative;
+      overflow: hidden;
+      background-color: var(--blanco)fff;
+      display: flex;
+      flex-flow: row wrap;
+      width: 90%;
+      padding: 50px 50px 10px;
+      max-width: 1180px;
+      box-shadow: 0 0 3px grey;
+      margin: 0 auto 15px;
+      justify-content: space-between;
+      box-sizing: content-box;
+      @media(--tablet){
+        width: 80vw;
+        padding: 4vw 5vw 1vw;
+        margin-bottom: 1vw;
+      }
+      @media(--mobile){
+        width: 80vw;
+        padding: 4vw 5vw 1vw;
+        margin-bottom: 1vw;
+      }
+    }
+    &-title{
+      font-family: var(--fuente);
+      color: var(--color2);
+      font-weight: var(--medium);
+      width: 60%;
+      font-size: 20px;
+      margin: 0;
+      @media(--tablet){
+        font-size: 1.8vw;
+      }
+      @media(--mobile){
+        width: 100%;
+        font-size: 5vw;
+        padding-bottom: 3vw;
+      }
+    }
+    &-logos{
+      display: flex;
+      flex-direction: column;
+      width: 35%;
+      align-items: flex-end;
+      height: 50px;
+      @media(--tablet){
+        height: 4.1vw;
+      }
+      @media(--mobile){
+        height: auto;
+        width: 100%;
+        align-items: flex-start;
+      }
+      &-element{
+        height: 60px;
+        margin-bottom: 10px;
+        @media(--tablet){
+          height: 5vw;
+          margin-bottom: 1vw;
+        }
+        @media(--mobile){
+          margin-bottom: 1vw;
+          height: 12vw;
+        }
+      }
+    }
+    &-data{
+      padding-bottom: 10px;
+      &-title{
+        font-family: var(--fuente);
+        color: var(--color2);
+        font-weight: var(--medium);
+        font-size: 16px;
+        margin-bottom: 15px;
+        @media(--tablet){
+          font-size: 1.3vw;
+          margin-bottom: 1vw;
+        }
+        @media(--mobile){
+          font-size: 4vw;
+          margin: 3vw 0;
+        }
+      }
+      &-text{
+        font-family: var(--fuente);
+        color: var(--gris);
+        font-weight: var(--regular);
+        margin-bottom: inherit;
+        line-height: initial;
+        font-size: 14px;
+        padding-bottom: 5px;
+        @media(--tablet){
+          font-size: 1.1vw;
+          padding-bottom: .5vw;
+        }
+        @media(--mobile){
+          font-size: 3vw;
+          padding-bottom: 2vw;
+        }
+      }
+    }
+    &-social{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 10px 0 ;
+      &-element{
+        font-family: var(--fuente);
+        color: var(--color2);
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-weight: var(--bold);
+        font-size: 14px;
+        padding: 0 20px 5px 0;
+        transition-duration: .5s;
+        @media(--tablet){
+          font-size: 1.1vw;
+          padding-bottom: .5vw;
+        }
+        @media(--mobile){
+          font-size: 3vw;
+          padding-bottom: 2vw;
+        }
+        &:visited, &:hover{
+          color: var(--color3);
+        }
+        &:before{
+          display: inline-block;
+          content: "";
+          background-repeat: no-repeat;
+          background-color: var(--color2);
+          color: var(--blanco);
+          border-radius: 50%;
+          background-position: center;
+          vertical-align: middle;
+          background-size: 14px;
+          width: 25px;
+          height: 25px;
+          margin-right: 5px;
+          @media(--tablet){
+            background-size: 1.2vw;
+            width: 2.5vw;
+            height: 2.5vw;
+            margin-right: .5vw;
+          }
+          @media(--mobile){
+            background-size: 2.5vw;
+            width: 5vw;
+            height: 5vw;
+            margin-right: 1vw;
+          }
+        }
+        &.tw{
+          &:before{
+            background-image: url('./assets/tw_icon.svg');
+          }
+        }
+        &.ig{
+          &:before{
+            background-image: url('./assets/ig_icon.svg');
+          }
+        }
+        &.fb{
+          &:before{
+            background-image: url('./assets/fb_icon.svg');
+          }
+        }
+        &.in{
+          &:before{
+            background-image: url('./assets/in_icon.svg');
+          }
+        }
+        &.yt{
+          &:before{
+            background-image: url('./assets/yt_icon.svg');
+          }
+        }
+      }
+      &-link{
+        font-family: var(--fuente);
+        color: var(--gris);
+        text-decoration: underline;
+        font-weight: var(--bold);
+        font-size: 14px;
+        padding: 0 20px 5px 0;
+        @media(--tablet){
+          font-size: 1.1vw;
+          padding-bottom: .5vw;
+        }
+        @media(--mobile){
+          font-size: 3vw;
+          padding-bottom: 2vw;
+        }
+        &:visited{
+          color: var(--gris);
+        }
+      }
+    }
+  }
+   &-bar{
+    width: 100vw;
+    background-color: var(--color3);
+    z-index: 50;
+    padding: 20px 0;
+    @media(--tablet){
+      padding: 2vw 0;
+    }
+    @media(--mobile){
+      padding: 4vw 0;
+    }
+    &-container{
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      @media(--tablet){
+        padding: 0 1vw;
+      }
+      @media(--mobile){
+        padding: 0;
+        width: max-content;
+      }
+    }
+    &-logo{
+      height: 25px;
+      margin-right: 10px;
+      padding-right: 10px;
+      @media(--tablet){
+        height: 2.5vw;
+        margin-right: 1vw;
+        padding-right: 1vw;
+      }
+      @media(--mobile){
+        height: 7vw;
+        margin-right: 2vw;
+        padding-right: 2vw;
+      }
+      &.border{
+        border-right: solid 1px var(--blanco);
+      }
+      @media(--mobile){
+        border-right-width: .2vw;
+      }
+    }
+  }
+}

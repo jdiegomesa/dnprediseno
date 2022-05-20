@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inicio | Departamento Nacional de Planeación</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fin Google Fonts -->
+  <!-- <link rel="stylesheet" href="./css/dnp_styles_v1.4.css"> -->
+  <link rel="stylesheet" href="./css/dnp_gifs.css">
+</head>
+<body>
+  <!-- Barra GOV.CO -->
+  <div class="DNPHeader-bar">
+    <div class="DNPHeader-container">
+      <a href="https://www.gov.co/" target="_blank">
+        <img src="./assets/logo_govco.svg" alt="Logo Gov.co" class="DNPHeader-bar-logo" />
+      </a>
+    </div>
+  </div>
+  <!-- FIN Barra GOV.CO -->
+  <!-- Banner especial no permanente -->
+  <a href="https://www.senaexpoempleojoven.com/" target="_blank" aria-label="Ir a ExpoEmpleo Joven" role="banner">
+    <div class="DNPBanner">
+      <picture>
+        <!-- Imagen móvil -->
+        <source 
+          srcset="https://colaboracion.dnp.gov.co/CDT/PublishingImages/HomeDNP/banners/Banner_abc_sisben_movil.jpg"
+          media="(max-width: 600px)"
+        />
+        <!-- Imagen de escritorio -->
+        <source 
+          srcset="https://colaboracion.dnp.gov.co/CDT/PublishingImages/HomeDNP/banners/abc_sisben_.jpg"
+          media="(min-width: 600px)"
+        />
+        <img class="DNPBanner-image"
+            src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/HomeDNP/banners/abc_sisben_.jpg" alt="Banner ExpoEmpleo Joven - Feria de empleo del SENA"
+          >
+          
+      </picture>
+    </div>
+  </a>
+  <!-- FIN Banner especial -->
+ <!-- Header -->
+  <header class="DNPHeader" id="DNPheader">
+    <div class="DNPHeader-brand">
+      <a href="https://dnp.gov.co" class="DNPHeader-brand-logo">
+        <!-- Logo del DNP -->
+        <img src="https://www.dnp.gov.co/estilos/images/logoNuevo.jpg" alt="Logo Departamento Nacional de Planeación">
+      </a>
+      <div class="DNPHeader-brand-search">
+        <!-- Agregar acción de búsqueda -->
+        <form action="">
+          <label for="buscador_dnp" class="hidden">Buscar en el DNP</label>
+          <input id="buscador_dnp" type="text" size="20" name="keywords" placeholder="Buscar" class="DNPHeader-brand-search-input">
+          <input type="submit" value="Buscar" aria-label="Buscar" class="DNPHeader-brand-search-button">
+        </form>
+      </div>
+    </div>
+  </header>
+  <!-- FIN Header -->
+  <!-- Navegacion -->
+  <nav class="DNPNav" id="DNPnav" role="navigation">
+    <!-- Boton abrir menú en móvil -->
+    <button aria-label="Botón Abrir/Cerrar" class="DNPNav-button" onclick="DNPopen('DNPnav');" role="button">
+      <img class="DNPNav-button-open" src="./assets/menu_button.svg" alt="Ícono de menú">
+      <img class="DNPNav-button-close" src="./assets/close_button.svg" alt="Ícono de cerrar">
+    </button>
+    <ul role="menubar" class="DNPNav-menu">
+      <li class="DNPNav-menu-item" id="DNPinicio" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPinicio', 'DNPNav-menu-item');"></div>
+        <a href="./index.html" role="link">Inicio</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+
+      <li class="DNPNav-menu-item" id="DNPtransparencia" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPtransparencia', 'DNPNav-menu-item');"></div>
+        <a href="./transparencia.html" role="link">Transparencia y acceso información pública</a>
+        <ul class="DNPNav-menu-item-submenu" >
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPservicios" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPservicios', 'DNPNav-menu-item');"></div>
+        <a href="./servicio_ciudadania.html" role="link">Atención y servicios a la ciudadanía</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPparticipa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPparticipa', 'DNPNav-menu-item');"></div>
+        <a href="./participa.html">Participa</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPentidad" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPentidad', 'DNPNav-menu-item');"></div>
+        <a href="./entidad.html" role="link">La Entidad</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./directivos.html">Directivos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./direcciones.html">Direcciones</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/misi%C3%B3n-visi%C3%B3n-origen">Misión, Visión, Origen</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/funciones-dnp">Funciones DNP</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/c%C3%B3digo-de-integridad">Código de integridad</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/objetivos">Objetivos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/planeacion-y-gestion-institucional">Planeación y gestión institucional</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/operaciones-recIprocas">Operaciones recíprocas</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/organigrama">Organigrama</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/contrataci%C3%B3n">Contratación</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/desarrollo-del-talento-humano">Desarrollo de talento humano</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/gesti%C3%B3n-documental">Gestión documental</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/participaci%C3%B3n-privada-en-proyectos-de-infraestructura">Participación privada en proyectos de infraestructura</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.datos.gov.co/browse?Informaci%C3%B3n-de-la-Entidad_Nombre-de-la-Entidad=Departamento+Nacional+de+Planeaci%C3%B3n&q=dnp&sortBy=relevance&utf8=%E2%9C%93">Datos abiertos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/factura-electr%C3%B3nica">Factura electrónica</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPnormativa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPnormativa', 'DNPNav-menu-item');"></div>
+        <a role="link" href="./normativa.html">Normativa</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./decreto.html">Decreto único reglamentario 1082 de 26 de mayo 2015</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/proyectos-de-normatividad">Proyectos de normatividad </a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/normograma">Normograma</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.sgr.gov.co/normativa.aspx">Sistema General de Regalías</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/leyes-plan-nacional-de-desarrollo">Leyes Plan Nacional de Desarrollo</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPprensa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPprensa', 'DNPNav-menu-item');"></div>
+        <a href="./prensa.html" role="link">Prensa</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/sala-de-prensa/Paginas/Comunicados.aspx#Default=%7B%22k%22:%22SPContentType:Slider%20de%20Noticias%22,%22o%22:%5B%7B%22d%22:1,%22p%22:%22DNPFechaPublicacion%22%7D%5D%7D">Comunicados</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.flickr.com/photos/142236467@N07/" target="_blank">Imágenes</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://soundcloud.com/redes-planeacion-nacional" target="_blank">Audios</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank">Videos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank">DNP Noticias</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/prensa/presentaciones">Presentaciones</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/prensa/publicaciones">Publicaciones</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+  <!-- FIN Navegacion -->
+
+  <main role="main">
+    <h1 class="hidden">Departamento Nacional de Planeación de Colombia</h1>
+    
+    <!-- Slider -->
+   <section class="DNPSlider" style="--slidercolor: #069169; --slidertextcolor: #fff;">
+      <h2 class="hidden">Información destacada</h2>
+      <div class="DNPSlider-container" id="DNPSliderHome" data-position="1">
+        <!-- Slide -->
+        <a href="https://www.dnp.gov.co/Paginas/Inversiones-por-$130-000-millones-para-potenciar-desarrollo-turistico-y-social-de-Mompox.aspx">
+          <div class="DNPSlider-element DNPSliderHome-element">
+             <div class="DNPSlider-element-info">
+              <p class="DNPSlider-element-info-title">Inversión histórica en vías terciarias en el Golfo de Morrosquillo</p>
+              <p class="DNPSlider-element-info-text">En una medida dirigida a afianzar la reactivación económica, el Gobierno nacional asignó $47.193 millones para la rehabilitación de vías terciarias en los departamentos de Sucre y Córdoba.</p>
+            </div>
+            <picture>
+              <!-- Imagen móvil -->
+              <source 
+                srcset="./img/slide2-mobile.png"
+                media="(max-width: 600px)"
+              />
+              <!-- Imagen de escritorio -->
+              <source 
+                srcset="./img/slide2-desktop.png"
+                media="(min-width: 600px)"
+              />
+              <img class="DNPSlider-element-image"
+                 src="img/slide2-desktop.png" alt="Paisaje Golfo de Morrosquillo"
+                >
+            </picture>
+          </div>
+        </a>
+        <!-- Slide -->
+        <a href="https://www.dnp.gov.co/Paginas/Inversiones-por-$130-000-millones-para-potenciar-desarrollo-turistico-y-social-de-Mompox.aspx">
+          <div class="DNPSlider-element DNPSliderHome-element">
+             <div class="DNPSlider-element-info">
+              <p class="DNPSlider-element-info-title">Inversión histórica en vías terciarias en el Golfo de Morrosquillo</p>
+              <p class="DNPSlider-element-info-text">En una medida dirigida a afianzar la reactivación económica, el Gobierno nacional asignó $47.193 millones para la rehabilitación de vías terciarias en los departamentos de Sucre y Córdoba.</p>
+            </div>
+            <picture>
+              <!-- Imagen móvil -->
+              <source 
+                srcset="./img/slide2-mobile.png"
+                media="(max-width: 600px)"
+              />
+              <!-- Imagen de escritorio -->
+              <source 
+                srcset="./img/slide2-desktop.png"
+                media="(min-width: 600px)"
+              />
+              <img class="DNPSlider-element-image"
+                 src="img/slide2-desktop.png" alt="Paisaje Golfo de Morrosquillo"
+                >
+            </picture>
+          </div>
+        </a>
+        <!-- Slide -->
+        <div class="DNPSlider-element DNPSliderHome-element">
+          <div class="DNPSlider-element-info">
+            <p class="DNPSlider-element-info-title">Inversión histórica en vías terciarias en el Golfo de Morrosquillo</p>
+            <p class="DNPSlider-element-info-text">En una medida dirigida a afianzar la reactivación económica, el Gobierno nacional asignó $47.193 millones para la rehabilitación de vías terciarias en los departamentos de Sucre y Córdoba.</p>
+          </div>
+          <picture>
+            <!-- Imagen móvil -->
+            <source 
+              srcset="./img/slide2-mobile.png"
+              media="(max-width: 600px)"
+            />
+            <!-- Imagen de escritorio -->
+            <source 
+              srcset="./img/slide2-desktop.png"
+              media="(min-width: 600px)"
+            />
+            <img class="DNPSlider-element-image"
+                src="img/slide2-desktop.png" alt="Paisaje Golfo de Morrosquillo"
+              >
+          </picture>
+        </div>
+        <!-- Slide -->
+        <a href="https://www.dnp.gov.co/Paginas/Inversiones-por-$130-000-millones-para-potenciar-desarrollo-turistico-y-social-de-Mompox.aspx">
+          <div class="DNPSlider-element DNPSliderHome-element">
+          <picture>
+            <source 
+              srcset="./img/slide1-mobile.png"
+              media="(max-width: 600px)"
+            />
+            <source 
+              srcset="./img/slide1-desktop.png"
+              media="(min-width: 600px)"
+            />
+            <img class="DNPSlider-element-image" src="img/slide1-desktop.png" alt="Paisaje Golfo de Morrosquillo" >
+          </picture>
+        </div>
+        </a>
+        <!-- Slide -->
+        <div class="DNPSlider-element DNPSliderHome-element">
+          <picture>
+            <source 
+              srcset="./img/slide1-mobile.png"
+              media="(max-width: 600px)"
+            />
+            <source 
+              srcset="./img/slide1-desktop.png"
+              media="(min-width: 600px)"
+            />
+            <img class="DNPSlider-element-image" src="img/slide1-desktop.png" alt="Paisaje Golfo de Morrosquillo" >
+          </picture>
+        </div>
+      </div>
+      <div class="DNPSlider-buttons">
+          <!-- Botón atrás del slider -->
+          <button class="DNPSlider-buttons-button" aria-label="Ir a slider anterior" onclick="DNPprevSlide('DNPSliderHome');">
+            <img src="./assets/down-blue-arrow.svg" alt="Flecha a la izquierda">
+          </button>
+          <div class="DNPSlider-buttons-dots">
+            <!-- Botones del slider: se debe renderizar uno por cada elemento existente y cambiar el número que se envía como parámetro en la función -->
+            <button class="DNPSlider-buttons-dots-element DNPSliderHome-dot active" aria-label="Ir a slider número 1" onclick="DNPgotoSlide('DNPSliderHome', 1);"></button>
+            <button class="DNPSlider-buttons-dots-element DNPSliderHome-dot" aria-label="Ir a slider número 2" onclick="DNPgotoSlide('DNPSliderHome', 2);"></button>
+            <button class="DNPSlider-buttons-dots-element DNPSliderHome-dot" aria-label="Ir a slider número 3" onclick="DNPgotoSlide('DNPSliderHome', 3);"></button>
+            <button class="DNPSlider-buttons-dots-element DNPSliderHome-dot" aria-label="Ir a slider número 3" onclick="DNPgotoSlide('DNPSliderHome', 4);"></button>
+            <button class="DNPSlider-buttons-dots-element DNPSliderHome-dot" aria-label="Ir a slider número 3" onclick="DNPgotoSlide('DNPSliderHome', 5);"></button>
+          </div>    
+         <!-- Botón de pausa del slider -->
+         <button class="DNPSlider-buttons-play" id="DNPpauseButton" aria-label="Reproducir/Pausar slider" onclick="DNPsliderPlay('DNPSliderHome', 'DNPSliderHome-element', 'DNPpauseButton', 5000);">
+           <img class="play" src="./assets/slider_play.svg" alt="Ícono de reproducir">
+           <img class="pause" src="./assets/slider_pause.svg" alt="Ícono de pausar">
+         </button>
+          <!-- Botón siguiente del slider -->
+         <button class="DNPSlider-buttons-button" aria-label="Ir a slider siguiente" onclick="DNPnextSlide('DNPSliderHome');">
+           <img src="./assets/down-blue-arrow.svg" alt="Flecha a la derecha">
+         </button>
+      </div>
+     
+    </section>
+    <!-- FIN Slider -->
+    <!-- Bloques misionalidades -->
+    <section class="DNPBlock DNPBlock-between">
+      <h2 class="hidden">Temas principales DNP</h2>
+      <!-- Bloque Sisben -->
+      <article class="DNPWindow" id="Sisben">
+        <h3 class="hidden">Sisben</h3>
+        <img src="./assets/sisben.png" alt="Logo Sisben" class="DNPWindow-logo" onclick="DNPopen('Sisben');">
+        <div class="DNPWindow-links">
+          <a href="https://www.sisben.gov.co/Paginas/consulta-tu-grupo.aspx" target="_blank" class="DNPWindow-links-element">Conoce tu clasificación</a>
+          <a href="https://www.sisben.gov.co/Paginas/oficinas-regionales.aspx" target="_blank" class="DNPWindow-links-element">Oficinas Sisbén del país</a>
+          <a href="https://www.sisben.gov.co/Paginas/preguntas-frecuentes.aspx" target="_blank" class="DNPWindow-links-element">Preguntas frecuentes</a>
+          <a href="https://www.sisben.gov.co/Paginas/programas-sociales.aspx" class="DNPWindow-links-element">Programas sociales</a>
+          <a href="https://www.sisben.gov.co/Paginas/landing.aspx" target="_blank" class="DNPSimplebutton DNPSimplebutton-color DNPWindow-links-button">Sisbén</a>
+        </div>
+        <button class="DNPWindow-arrow" onclick="DNPopen('Sisben');">
+          <img src="./assets/down-blue-arrow.svg" alt="Ícono de flecha" />
+        </button>
+      </article>
+      <!-- Bloque Conpes -->
+      <article class="DNPWindow" id="Conpes">
+        <h3 class="hidden">Conpes</h3>
+        <img src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/HomeDNP/logos/Conpes-Logo.jpg" alt="Logo Conpes" class="DNPWindow-logo" onclick="DNPopen('Conpes');">
+        <div class="DNPWindow-links">
+          <a href="https://www.dnp.gov.co/CONPES/documentos-conpes/Paginas/documentos-conpes.aspx" class="DNPWindow-links-element">Aprobados</a>
+          <a href="https://www.dnp.gov.co/CONPES/Paginas/CONPES-Elaboracion.aspx" class="DNPWindow-links-element">Para comentarios</a>
+          <a href="https://sisconpes.dnp.gov.co/sisconpesweb/" class="DNPWindow-links-element">SISCONPES</a>
+          <a href=" https://open.spotify.com/show/1SOrMV8tqYrBztgkEyEsPL" target="_blank" class="DNPWindow-links-element">Hablemos de CONPES</a>
+          <a href="./conpes.html" class="DNPSimplebutton DNPSimplebutton-color DNPWindow-links-button">Conpes</a>
+        </div>
+         <button class="DNPWindow-arrow" onclick="DNPopen('Conpes');">
+          <img src="./assets/down-blue-arrow.svg" alt="Ícono de flecha" />
+        </button>
+      </article>
+      <!-- Bloque SGR -->
+      <article class="DNPWindow" id="Regalias">
+        <h3 class="hidden">Sistema General de Regalías</h3>
+        <img src="./assets/sgr.png" alt="Logo SGR" class="DNPWindow-logo" onclick="DNPopen('Regalias');">
+        <div class="DNPWindow-links">
+          <a href="https://www.sgr.gov.co/Vigilancia/Gesti%C3%B3ndeproyectosGesproy.aspx" target="_blank" class="DNPWindow-links-element">GESPROY 3.0</a>
+          <a href="https://auditoresciudadanos.dnp.gov.co/" target="_blank" class="DNPWindow-links-element">Auditores ciudadanos</a>
+          <a href="https://proyectostipo.dnp.gov.co/" target="_blank" class="DNPWindow-links-element"> Mapa Inversiones</a>
+          <a href="https://www.sgr.gov.co/Vigilancia/Medici%C3%B3ndeDesempe%C3%B1oIGPR.aspx" target="_blank" class="DNPWindow-links-element">IGPR 2.0</a>
+           <a href="https://www.sgr.gov.co/" target="_blank" class="DNPSimplebutton DNPSimplebutton-color DNPWindow-links-button">SGR</a>
+        </div>
+        <button class="DNPWindow-arrow" onclick="DNPopen('Regalias');">
+          <img src="./assets/down-blue-arrow.svg" alt="Ícono de flecha" />
+        </button>
+      </article>
+      <!-- Bloque Pactos Territoriales -->
+      <article class="DNPWindow" id="Pactos">
+        <h3 class="hidden">Pactos Territoriales</h3>
+        <img src="https://pactosterritoriales.dnp.gov.co/_catalogs/masterpage/Pactos%20Territoriales/images/pactos-territoriales-logo.png" alt="Logo Pactos territoriales" class="DNPWindow-logo" onclick="DNPopen('Pactos');">
+        </a>
+        <div class="DNPWindow-links">
+          <a href="https://pactosterritoriales.dnp.gov.co/contratosplan" class="DNPWindow-links-element">Pactos suscritos</a>
+          <a href="https://pactosterritoriales.dnp.gov.co/contratospaz" class="DNPWindow-links-element">Contratos Paz</a>
+          <a href="https://pactosterritoriales.dnp.gov.co/Pactos-Territoriales-suscritos" class="DNPWindow-links-element">Contratos Plan</a>
+          <a href="https://pactosterritoriales.dnp.gov.co/pactosterritoriales/que-son-pactos-territoriales" class="DNPWindow-links-element">¿Qué son?</a>
+          <a href=" https://pactosterritoriales.dnp.gov.co/" class="DNPSimplebutton DNPSimplebutton-color DNPWindow-links-button">Pactos Territoriales</a>
+        </div>
+        <button class="DNPWindow-arrow" onclick="DNPopen('Pactos');">
+          <img src="./assets/down-blue-arrow.svg" alt="Ícono de flecha" />
+        </button>
+      </article>
+    </section>
+    <section class="DNPBlock DNPBlock-center">
+      <!-- Bloque PND -->
+      <article class="DNPWindow-flag" id="DNP_pnd">
+        <div class="DNPWindow-flag-info">
+          <div class="DNPWindow-flag-info-color">
+            <h3 class="DNPWindow-flag-info-color-title">Plan Nacional de Desarrollo 2018 - 2020</h3>
+          </div>
+          <div class="DNPWindow-flag-info-graphic">
+            <img src="./img/banner_prueba2.png" alt="" class="DNPWindow-flag-info-graphic-picture">
+            <button class="DNPWindow-flag-info-graphic-button" aria-label="Expandir bloque PND" onclick="DNPopen('DNP_pnd');" >
+              Más detalles <span></span>
+            </button>
+          </div>
+        </div>
+        <div class="DNPWindow-flag-modal">
+          <!-- Preguntas frecuentes -->
+          <div class="DNPWindow-flag-modal-buttons">
+            <h4 class="DNPWindow-flag-modal-buttons-title">Preguntas</h4>
+            <a href="" class="DNPWindow-flag-modal-buttons-element">ABC del PND</a>
+            <a href="" class="DNPWindow-flag-modal-buttons-element">20 metas del PND</a>
+            <a href="" class="DNPWindow-flag-modal-buttons-element">Resumen del PND</a>
+            <a href="" class="DNPWindow-flag-modal-buttons-element">PND anteriores</a>
+          </div>
+          <!-- Nota destacada -->
+          <a href="./noticia.html">
+            <div class="DNPWindow-flag-modal-content">
+              <h4 class="DNPWindow-flag-modal-content-title">Colombia: potencia bioceánica</h4>
+              <img src="./img/nota-dnp-apaisada.jpg" alt="Pescador lanzando una atarraya" class="DNPWindow-flag-modal-content-image">
+              <p class="DNPWindow-flag-modal-content-text">Los colombianos reconoceremos el potencial de desarrollo único que tienen nuestros océanos. Aprovecharemos de forma responsable y sostenible sus recursos; conservando y cuidando la diversidad que nos proporcionan los ecosistemas marinos, costeros e insulares.</p>
+            </div>
+          </a>
+          <div class="DNPWindow-flag-modal-document">
+            <h4 class="DNPWindow-flag-modal-document-title">Pacto por Colombia, pacto por la equidad</h4>
+            <a href="https://colaboracion.dnp.gov.co/CDT/Prensa/PND-Pacto-por-Colombia-pacto-por-la-equidad-2018-2022.pdf">
+              <img src="./img/portada-pnd-destacado.jpg" alt="Portada PND 2018 - 2022" class="DNPWindow-flag-modal-document-image">
+            </a>
+            <a href="https://dnp.gov.co/DNPN/Paginas/Plan-Nacional-de-Desarrollo.aspx" class="DNPSimplebutton DNPSimplebutton-color DNPWindow-flag-modal-document-button">Más detalles</a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- FIN Bloques misionalidades -->
+    <!-- Bloque noticias -->
+    <section class="DNPBlock">
+      <h2 class="DNPText-principaltitle">Noticias</h2>
+      <p class="DNPText-principalsubtitle">Destacadas de la semana</p>
+      <div class="DNPNews">
+        <button class="DNPNews-button" aria-label="Ir a slider anterior" onclick="DNPprevSlide('DNPNoticiashome');">
+          <img src="./assets/down-blue-arrow.svg" alt="Flecha a la izquierda">
+        </button>
+        <div class="DNPNews-window">
+        <div class="DNPNews-container" data-position="1" id="DNPNoticiashome">
+          <!-- Noticia -->
+          <article class="DNPNews-item DNPNoticiashome-element">
+            <a href="./noticia.html">
+              <img src="./img/nota-2-cuadrada.jpg" alt="Consulte el boletín trimestral OCDE Colombia" class="DNPNews-item-image">
+              <div class="DNPNews-item-content">
+                <h3 class="DNPNews-item-content-title">Consulte el boletín trimestral OCDE Colombia</h3>
+                <p class="DNPNews-item-content-date">Noticias / Abril 2021</p>
+                <p class="DNPNews-item-content-text">En esta edición, podrán encontrar una síntesis de los asuntos más relevantes discutidos en la OCDE durante el último trimestre. También encontrarán una...</p>
+              </div>
+            </a>
+          </article>
+          <!-- Noticia -->
+          <article class="DNPNews-item DNPNoticiashome-element">
+            <a href="./noticia.html">
+              <img src="./img/nota-1-cuadrada.jpg" alt="El Sisbén se moderniza y lanza versión IV" class="DNPNews-item-image">
+              <div class="DNPNews-item-content">
+                <h3 class="DNPNews-item-content-title">El Sisbén se moderniza y lanza versión IV</h3>
+                <p class="DNPNews-item-content-date">Noticias / Marzo 2021</p>
+                <p class="DNPNews-item-content-text">​​​A partir del 5 de marzo se moderniza el sistema de información del Sisbén. Después de tres años de trabajo conjunto con las entidades territoriales para actualizar la información... </p>
+              </div>
+            </a>
+          </article>
+          <!-- Noticia -->
+          <article class="DNPNews-item DNPNoticiashome-element">
+            <a href="./noticia.html">
+              <img src="./img/nota-2-cuadrada.jpg" alt="Consulte el boletín trimestral OCDE Colombia" class="DNPNews-item-image">
+              <div class="DNPNews-item-content">
+                <h3 class="DNPNews-item-content-title">Consulte el boletín trimestral OCDE Colombia</h3>
+                <p class="DNPNews-item-content-date">Noticias / Marzo 2021</p>
+                <p class="DNPNews-item-content-text">En esta edición, podrán encontrar una síntesis de los asuntos más relevantes discutidos en la OCDE durante el último trimestre. También encontrarán una...</p>
+              </div>
+            </a>
+          </article>
+          <!-- Noticia -->
+          <article class="DNPNews-item DNPNoticiashome-element">
+            <a href="./noticia.html">
+              <img src="./img/nota-1-cuadrada.jpg" alt="El Sisbén se moderniza y lanza versión IV" class="DNPNews-item-image">
+              <div class="DNPNews-item-content">
+                <h3 class="DNPNews-item-content-title">El Sisbén se moderniza y lanza versión IV</h3>
+                <p class="DNPNews-item-content-date">Noticias / Marzo 2021</p>
+                <p class="DNPNews-item-content-text">​​​A partir del 5 de marzo se moderniza el sistema de información del Sisbén. Después de tres años de trabajo conjunto con las entidades territoriales para actualizar la información... </p>
+              </div>
+            </a>
+          </article>
+          <!-- Noticia -->
+          <article class="DNPNews-item DNPNoticiashome-element">
+            <a href="./noticia.html">
+              <img src="./img/nota-1-cuadrada.jpg" alt="El Sisbén se moderniza y lanza versión IV" class="DNPNews-item-image">
+              <div class="DNPNews-item-content">
+                <h3 class="DNPNews-item-content-title">El Sisbén se moderniza y lanza versión IV</h3>
+                <p class="DNPNews-item-content-date">Noticias / Marzo 2021</p>
+                <p class="DNPNews-item-content-text">​​​A partir del 5 de marzo se moderniza el sistema de información del Sisbén. Después de tres años de trabajo conjunto con las entidades territoriales para actualizar la información... </p>
+              </div>
+            </a>
+          </article>
+          <!-- Noticia -->
+          <article class="DNPNews-item DNPNoticiashome-element">
+            <a href="./noticia.html">
+              <img src="./img/nota-1-cuadrada.jpg" alt="El Sisbén se moderniza y lanza versión IV" class="DNPNews-item-image">
+              <div class="DNPNews-item-content">
+                <h3 class="DNPNews-item-content-title">El Sisbén se moderniza y lanza versión IV</h3>
+                <p class="DNPNews-item-content-date">Noticias / Marzo 2021</p>
+                <p class="DNPNews-item-content-text">​​​A partir del 5 de marzo se moderniza el sistema de información del Sisbén. Después de tres años de trabajo conjunto con las entidades territoriales para actualizar la información... </p>
+              </div>
+            </a>
+          </article>
+          <!-- Noticia -->
+          <article class="DNPNews-item DNPNoticiashome-element">
+            <a href="./noticia.html">
+              <img src="./img/nota-1-cuadrada.jpg" alt="El Sisbén se moderniza y lanza versión IV" class="DNPNews-item-image">
+              <div class="DNPNews-item-content">
+                <h3 class="DNPNews-item-content-title">El Sisbén se moderniza y lanza versión IV</h3>
+                <p class="DNPNews-item-content-date">Noticias / Marzo 2021</p>
+                <p class="DNPNews-item-content-text">​​​A partir del 5 de marzo se moderniza el sistema de información del Sisbén. Después de tres años de trabajo conjunto con las entidades territoriales para actualizar la información... </p>
+              </div>
+            </a>
+          </article>
+        </div>
+        </div>
+        <button class="DNPNews-button" aria-label="Ir a slider siguiente" onclick="DNPnextSlide('DNPNoticiashome');">
+          <img src="./assets/down-blue-arrow.svg" alt="Flecha a la derecha">
+        </button>
+      </div>
+      <a href="https://www.dnp.gov.co/sala-de-prensa/Paginas/Comunicados.aspx#Default={%22k%22:%22SPContentType:Noticias%22,%22o%22:[{%22d%22:1,%22p%22:%22DNPFechaPublicacion%22}]}" class="DNPSimplebutton DNPSimplebutton-color">Ver más noticias del DNP</a>
+    </section>
+    <!-- FIN Bloque noticias -->
+    <!-- Bloque multimedia -->
+    <section class="DNPBlock DNPBlock-between">
+      <h2 class="hidden">Multimedia</h2>
+      <div class="DNPMedia">
+        <!-- Imágenes -->
+        <div class="DNPMedia-info">
+          <h3 class="DNPMedia-info-text">DNP en imágenes</h3>
+          
+        </div>
+        <div class="DNPMedia-gallery">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./img/galeria1.jpg" alt="Encuentro regional" class="DNPMedia-gallery-image">
+            <p class="DNPMedia-gallery-title DNPMedia-gallery-title-small">Consulte el boletín trimestral OCDE Colombia</p>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./img/galeria2.jpg" alt="Director del DNP" class="DNPMedia-gallery-image">
+            <p class="DNPMedia-gallery-title DNPMedia-gallery-title-small">Consulte el boletín trimestral OCDE Colombia</p>
+          </a>
+          <a href="https://www.flickr.com/photos/142236467@N07/" class="DNPSimplebutton DNPSimplebutton-color">Ver galería fotográfica del DNP</a>
+        </div>
+        <!-- Audios -->
+        <div class="DNPMedia-info">
+          <h3 class="DNPMedia-info-text">Pódcast: Hablemos del DNP</h3>
+          
+        </div>
+        <div class="DNPMedia-gallery-audio">
+          <iframe title="Rueda de prensa: CONPES aprueba plan de reactivación y empleo por más de $135 billones" scrolling="no" frameborder="no" allow="autoplay" src="https://widget.spreaker.com/player?episode_id=49353352&theme=light&playlist=false"></iframe>
+          <a href="https://soundcloud.com/redes-planeacion-nacional" class="DNPSimplebutton DNPSimplebutton-color">Escucha más audios del DNP</a>
+        </div>
+      </div>
+      <div class="DNPMedia">
+        <!-- Video -->
+        <div class="DNPMedia-info">
+          <h3 class="DNPMedia-info-text">Socialización de la política nacional de emprendimiento</h3>
+          
+        </div>
+        <div class="DNPMedia-video">
+          <iframe src="https://www.youtube.com/embed/kCqGnsrZ5Pk" title="Socialización de la Política Nacional de Emprendimiento (CONPES 4011)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p class="DNPMedia-gallery-title DNPMedia-gallery-title-video">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem doloribus maxime et reiciendis, officiis rerum culpa animi, sint magni ut pariatur? Atque ducimus illo quod repellat ipsum aperiam modi molestias.</p>
+          <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" class="DNPSimplebutton DNPSimplebutton-color">Ver más videos del DNP</a>
+        </div>
+      </div>
+    </section>
+    <!-- FIN Bloque multimedia -->
+    <!-- Bloque streaming -->
+    <section class="DNPSinglevideo">
+      <div class="DNPSinglevideo-info">
+        <h2 class="DNPText-title DNPText-title-color2">Transmisiones en vivo</h2>
+        <h3 class="DNPText-simpletitle">Procesamiento de lenguaje natural para apoyar la formulación de política pública</h3>
+        <div class="DNPSinglevideo-info-text DNPRichtext">
+          <p>En este Seminario de Economía se explicará como la introducción al análisis de texto puede contribuir en la toma de decisiones en política pública.</p>
+          <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank" class="DNPSimplebutton">Ir a más transmisiones</a>
+        </div>
+      </div>
+      <iframe class="DNPSinglevideo-video" src="https://www.youtube.com/embed/hApAn-OrzJg" title="Socialización de la Política Nacional de Emprendimiento (CONPES 4011)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <!-- FIN Bloque streaming -->
+    <!-- Bloque menús inferiores -->
+    <section class="DNPBlock DNPBlock-between DNPBlock-relative DNPDrop-box">
+      <h2 class="hidden">Otros contenidos</h2>
+        <!-- Bloque agenda -->
+        <div class="DNPDrop DNPDrop-agenda" id="DNPagenda">
+          <h3 class="DNPDrop-title">Agenda</h3>
+          <div class="DNPDrop-container">
+            <!-- Evento de agenda -->
+            <button class="DNPDrop-agenda-element">
+              <div class="DNPDrop-agenda-element-date">
+                <p class="DNPDrop-agenda-element-date-day">6</p>
+                <p class="DNPDrop-agenda-element-date-month">Julio</p>
+              </div>
+              <div class="DNPDrop-agenda-element-info">
+                <h4 class="DNPDrop-agenda-element-info-title">Nombre del evento</h4>
+                <p class="DNPDrop-agenda-element-info-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+              </div>
+            </button>
+            <!-- Evento de agenda -->
+            <button class="DNPDrop-agenda-element">
+              <div class="DNPDrop-agenda-element-date">
+                <p class="DNPDrop-agenda-element-date-day">6</p>
+                <p class="DNPDrop-agenda-element-date-month">Julio</p>
+              </div>
+              <div class="DNPDrop-agenda-element-info">
+                <h4 class="DNPDrop-agenda-element-info-title">Nombre del evento</h4>
+                <p class="DNPDrop-agenda-element-info-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+              </div>
+            </button>
+            <!-- Evento de agenda -->
+            <button class="DNPDrop-agenda-element">
+              <div class="DNPDrop-agenda-element-date">
+                <p class="DNPDrop-agenda-element-date-day">6</p>
+                <p class="DNPDrop-agenda-element-date-month">Julio</p>
+              </div>
+              <div class="DNPDrop-agenda-element-info">
+                <h4 class="DNPDrop-agenda-element-info-title">Nombre del evento</h4>
+                <p class="DNPDrop-agenda-element-info-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+              </div>
+            </button>
+            <!-- Evento de agenda -->
+            <button class="DNPDrop-agenda-element">
+              <div class="DNPDrop-agenda-element-date">
+                <p class="DNPDrop-agenda-element-date-day">25</p>
+                <p class="DNPDrop-agenda-element-date-month">Diciembre</p>
+              </div>
+              <div class="DNPDrop-agenda-element-info">
+                <h4 class="DNPDrop-agenda-element-info-title">Nombre del evento</h4>
+                <p class="DNPDrop-agenda-element-info-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+              </div>
+            </button>
+
+          </div>
+          <button class="DNPDrop-button" onmousedown="DNPopen('DNPagenda', 'DNPDrop');" onfocus="this.blur();">
+            <p class="DNPDrop-button-text DNPDrop-button-text-open">Ver agenda completa</p>
+            <p class="DNPDrop-button-text DNPDrop-button-text-close">Cerrar</p>
+             <img class="DNPDrop-button-icon" src="./assets/down-blue-arrow.svg" alt="Ícono de flecha" />
+          </button>
+        </div>
+        <!-- Bloque notificaciones -->
+        <div class="DNPDrop DNPDrop-notificaciones" id="DNPnotificaciones">
+          <h3 class="DNPDrop-title">Notificaciones</h3>
+          <div class="DNPDrop-container">
+              <!-- Notificación -->
+              <a class="DNPDrop-notificaciones-element" href="https://colaboracion.dnp.gov.co/CDT/Normatividad/RESOLUCION-2102-DE-2020.pdf?Web=1">
+                Notificación por Estado N° 003-2021 GCDI 
+              </a>
+              <a class="DNPDrop-notificaciones-element" href="https://colaboracion.dnp.gov.co/CDT/DNP/Gestion%20Documental/Resolucion-0383-2021-entrega-de-bienes-Alcaldia-de-la-Montanita.pdf">
+                Resolución No.0383 de febrero 2021: Entrega de bienes muebles Alcaldía de la Montañita
+              </a>
+              <a class="DNPDrop-notificaciones-element" href="https://colaboracion.dnp.gov.co/CDT/Normatividad/Notificacion%20ESTADO%20ID%2004-2019.pdf">
+                AUTO SG-GCDIC20206700000199
+              </a>
+              <a class="DNPDrop-notificaciones-element" href="https://colaboracion.dnp.gov.co/CDT/Normatividad/Oficio%2020205320847811_.pdf">
+                Oficio 20205320847811: correspondiente a la respuesta a radicado 20206630742722
+              </a>
+              <a class="DNPDrop-notificaciones-element" href="https://colaboracion.dnp.gov.co/CDT/Normatividad/Oficio%2020205320847811_.pdf">
+                Oficio 20205320847811: correspondiente a la respuesta a radicado 20206630742722
+              </a>
+              <a class="DNPDrop-notificaciones-element" href="https://colaboracion.dnp.gov.co/CDT/Normatividad/Oficio%2020205320847811_.pdf">
+                Oficio 20205320847811: correspondiente a la respuesta a radicado 20206630742722
+              </a>
+              <a class="DNPDrop-notificaciones-element" href="https://colaboracion.dnp.gov.co/CDT/Normatividad/Oficio%2020205320847811_.pdf">
+                Oficio 20205320847811: correspondiente a la respuesta a radicado 20206630742722
+              </a>
+              <a class="DNPDrop-notificaciones-element" href="https://colaboracion.dnp.gov.co/CDT/Normatividad/Oficio%2020205320847811_.pdf">
+                Oficio 20205320847811: correspondiente a la respuesta a radicado 20206630742722
+              </a>
+              <a class="DNPDrop-notificaciones-element" href="https://colaboracion.dnp.gov.co/CDT/Normatividad/Oficio%2020205320847811_.pdf">
+                Oficio 20205320847811: correspondiente a la respuesta a radicado 20206630742722
+              </a>
+              <a class="DNPDrop-notificaciones-element" href="https://colaboracion.dnp.gov.co/CDT/Normatividad/Oficio%2020205320847811_.pdf">
+                Oficio 20205320847811: correspondiente a la respuesta a radicado 20206630742722
+              </a>
+          </div>
+         <button class="DNPDrop-button" onmousedown="DNPopen('DNPnotificaciones','DNPDrop');" onfocus="this.blur();">
+            <p class="DNPDrop-button-text DNPDrop-button-text-open">Más notificaciones</p>
+            <p class="DNPDrop-button-text DNPDrop-button-text-close">Cerrar</p>
+             <img class="DNPDrop-button-icon" src="./assets/down-blue-arrow.svg" alt="Ícono de flecha" />
+          </button>
+        </div>
+    </section>
+    <!-- FIN Bloque menús inferiores -->
+    <!-- Bloque botones destacados  -->
+    <section class="DNPBlock DNPBlock-between DNPHighlightbutton-container">
+      <a class="DNPHighlightbutton" href="#">Publicaciones técnicas</a>
+      <a class="DNPHighlightbutton" href="#">Conpes - Transmisión energética</a>
+      <a class="DNPHighlightbutton" href="#">Informes económicos</a>
+    </section> 
+    <!-- FIN Bloque botones destacados  -->
+    <!-- Bloque destacados -->
+    <section class="DNPBlock">
+      <h2 class="DNPText-principaltitle">Destacados</h2>
+      <div class="DNPDocs">
+        <button class="DNPDocs-arrow" aria-label="Ir al anterior slide" onclick="DNPprevSlide('DNPDestacados');">
+          <img src="./assets/down-blue-arrow.svg" alt="Flecha a la izquierda">
+        </button>
+        <div class="DNPDocs-window">
+          <div class="DNPDocs-elements" id="DNPDestacados" data-position="1">
+            <a href="#">
+              <img src="./img/ejemplo-especial.jpg" alt="Portada especial uno" class="DNPDocs-elements-item DNPDestacados-element">
+            </a>
+            <a href="#">
+              <img src="./img/ejemplo-especial.jpg" alt="Portada publicación dos " class="DNPDocs-elements-item DNPDestacados-element">
+            </a>
+            <a href="#">
+              <img src="./img/ejemplo-especial.jpg" alt="Portada especial dos" class="DNPDocs-elements-item DNPDestacados-element">
+            </a>
+            <a href="#">
+              <img src="./img/ejemplo-especial.jpg" alt="Portada publicación dos" class="DNPDocs-elements-item DNPDestacados-element">
+            </a>
+            <a href="#">
+              <img src="./img/ejemplo-especial.jpg" alt="Portada especial tres" class="DNPDocs-elements-item DNPDestacados-element">
+            </a>
+            <a href="#">
+              <img src="./img/ejemplo-especial.jpg" alt="Portada publicacion tres" class="DNPDocs-elements-item DNPDestacados-element">
+            </a>
+          </div>
+        </div>
+        <button class="DNPDocs-arrow" aria-label="Ir al siguiente slide" onclick="DNPnextSlide('DNPDestacados');" >
+          <img src="./assets/down-blue-arrow.svg" alt="Flecha a la derecha">
+        </button>
+      </div>
+    </section>
+    <!-- FIN Bloque destacados -->
+    <!-- Bloque Portales -->
+    <section class="DNPBlock" >
+      <div class="DNPSites">
+        <button class="DNPSites-arrow" aria-label="Ir al anterior slide" onclick="DNPprevSlide('DNPPortales');">
+          <img src="./assets/down-blue-arrow.svg" alt="Flecha a la izquierda">
+        </button>
+        <div class="DNPSites-window">
+          <div class="DNPSites-elements" id="DNPPortales" data-position="1">
+            <!-- SubPortal -->
+            <a class="DNPSites-elements-item DNPPortales-element" href="https://ods.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Portal%20ODS.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <!-- SubPortal -->
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+            <a class="DNPSites-elements-item DNPPortales-element" href="http://maparegalias.sgr.gov.co/" target="_blank">
+              <img class="DNPSites-elements-item-logo" src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/Bot%C3%B3n%20Mapa%20Regalias.png" alt="Objetivos de desarrollo sostenible">
+            </a>
+        </div>
+      </div>
+      <button class="DNPSites-arrow" aria-label="Ir al siguiente slide" onclick="DNPnextSlide('DNPPortales');" >
+          <img src="./assets/down-blue-arrow.svg" alt="Flecha a la derecha">
+        </button>
+      </div>
+    </section>
+    <!-- Bloque Portales -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="DNPFooter" role="contentinfo">
+    <div class="DNPFooter-info">
+      <div class="DNPFooter-info-container">
+        <h2 class="hidden">Pié de página - Más del DNP</h2>
+        <h3 class="DNPFooter-info-title">Departamento Nacional de Planeación</h3>
+        <div class="DNPFooter-info-logos">
+          <img src="https://www.dnp.gov.co/estilos/images/logoNuevo.jpg" alt="Logo Departamento Nacional de Planeación" class="DNPFooter-info-logos-element">
+          <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="Ir a La Rebeca">
+            <img src="./assets/boton_la_rebeca.svg" alt="Logo La Rebeca" class="DNPFooter-info-logos-element">
+          </a>
+        </div>
+        <div class="DNPFooter-info-data">
+          <h4 class="DNPFooter-info-data-title">Sede principal</h4>
+          <p class="DNPFooter-info-data-text">Dirección: Calle 26 # 13-19 - Edificio ENTerritorio / Bogotá D.C., Colombia</p>
+          <p class="DNPFooter-info-data-text">Código Postal: 110311</p>
+          <p class="DNPFooter-info-data-text">Horario de Atención: Lunes a viernes 8:00 a.m. a 4:30 p.m. jornada continua</p>
+          <p class="DNPFooter-info-data-text">Teléfono Conmutador: +57 (1) 381 50 00</p>
+          <p class="DNPFooter-info-data-text">Línea Gratuita: 01 8000 12 12 21</p>
+          <p class="DNPFooter-info-data-text">Buzón de notificaciones DNP: notificacionesjudiciales@dnp.gov.co</p>
+          <p class="DNPFooter-info-data-text"></p>
+        </div>
+        <div class="DNPFooter-info-social">
+          <a href="https://twitter.com/DNP_Colombia" class="DNPFooter-info-social-element tw">@DNP_Colombia</a>
+          <a href="https://www.instagram.com/dnp_colombia/" target="_blank" class="DNPFooter-info-social-element ig">@dnp_colombia</a>
+          <a href="https://www.facebook.com/departamentonacionaldeplaneacion/" target="_blank" class="DNPFooter-info-social-element fb">@DNPColombia</a>
+          <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank" class="DNPFooter-info-social-element yt">DNP Colombia</a>
+          <a href="https://www.linkedin.com/company/departamento-nacional-de-planeacion/" target="_blank" class="DNPFooter-info-social-element in">Departamento Nacional de Planeación</a>
+        </div>
+        <div class="DNPFooter-info-social">
+          <a href="/Politica-de-seguridad/#terminos-y-condiciones" class="DNPFooter-info-social-link">Terminos y condiciones</a>
+          <a href="/Politica-de-seguridad/#politica-de-privacidad" class="DNPFooter-info-social-link">Política de privadicad</a>
+          <a href="/Politica-de-seguridad/#politica-derechos-de-autor" class="DNPFooter-info-social-link">Política de derechos de autor</a>
+          <a href="/mapa-del-sitio" class="DNPFooter-info-social-link">Mapa del sitio</a>
+          <!--<a href="/Accesibilidad" class="DNPFooter-info-social-link">Accesibilidad</a>!-->
+          <a href="/_layouts/15/Authenticate.aspx" class="DNPFooter-info-social-link">Inicio de sesión</a>
+          <a href="https://portal.microsoftonline.com/" class="DNPFooter-info-social-link" target="_blank">Correo institucional</a>
+        </div>
+      </div>
+    </div>
+    <div class="DNPFooter-bar">
+      <div class="DNPFooter-bar-container">
+        <img src="./assets/colombia_co.png" alt="Logo Marca Colombia" class="DNPFooter-bar-logo border">
+        <a href="https://www.gov.co/" target="_blank">
+          <img src="./assets/logo_govco.svg" alt="Logo Gov.co" class="DNPFooter-bar-logo">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- FIN Footer -->
+  <!-- Botón Volver arriba -->
+  <button class="DNPUp" id="DNPUp" onclick="DNPscroll('DNPheader');">
+    <img src="./assets/up-button.svg" alt="Flecha hacia arriba" class="DNPUp-icon">
+    <p class="DNPUp-text">Volver arriba</p>
+  </button>
+  <!-- FIN Botón Volver arriba -->
+  <script type="text/javascript" src="./js/dnp_scripts.js"></script>
+
+
+
+  <!--Llamados de desarrollo-->
+  <section id="app"></section>
+  <script type="text/javascript" src="./modules.js"></script>
+  <script type="text/javascript" src="http://localhost:9000/js/app.js"></script>
+  <!--FIN Llamados de desarrollo-->
+
+</body>
+</html>

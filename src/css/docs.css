@@ -1,0 +1,108 @@
+.DNPDocs{
+  width: 1280px;
+  margin: 0 auto;
+  padding: var(--fuente4) 0 var(--fuente1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media(--tablet){
+    width: 85vw;
+    padding: 2vw 0;
+  }
+  @media(--mobile){
+    width: 90vw;
+    justify-content: space-between;
+  }
+  &-arrow{
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 35px;
+    cursor: pointer;
+    transition: .5s;
+    @media(--tablet){
+      width: 2.5vw;
+    }
+    @media(--mobile){
+      width: 5vw;
+    }
+    &:hover, &:active{
+      background-color: transparent;
+      transform: scale(1.1);
+    }
+    & img{
+      width: 100%;
+    }
+    &:first-of-type > img{
+      transform: rotate(90deg);
+    }
+    &:last-of-type > img{
+      transform: rotate(-90deg);
+    }
+  }
+  &-window{
+    width: 1185px;
+    overflow-x: hidden;
+    @media(--tablet){
+      width: 84.64vw;
+    }
+    @media(--mobile){
+      width: 70vw;
+    }
+  }
+  &-elements{
+    width: max-content;
+    overflow-y: hidden;
+    transition-duration: .5s;
+    &-item{
+      width: 220px;
+      padding: 0 7px;
+      transition-duration: .5s;
+      will-change: transform;
+      box-sizing: content-box;
+      &:hover{
+        transform: scale(1.02);
+      }
+      @media(--tablet){
+        width: 14.7vw;
+        padding: 0 .5vw;
+      }
+      @media(--mobile){
+        width: 65vw;
+        padding: 0 2.5vw;
+      }
+    }
+  }
+  &-button{
+    background-color: var(--color3);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-family: var(--fuente);
+    transition-duration: .5s;
+    will-change: background-color;
+    border-radius: 300px;
+    font-size: 17px;
+    padding: 10px 19px;
+    margin: 0 175px 0 auto;
+    &:hover{
+      background-color: var(--color2);
+      color: var(--blanco);
+      text-decoration: none;
+    }
+    &:visited{
+      color: var(--blanco) !important;
+    }
+    @media(--tablet){
+      font-size: 1.3vw;
+      padding: .9vw 1.7vw;
+      margin: 0 7.5vw 0 auto;
+    }
+    @media(--mobile){
+      width: max-content;
+      font-size: 3.5vw;
+      padding: 1.7vw 3.5vw;
+      margin: 0 0 6vw auto;
+    }
+  }
+}

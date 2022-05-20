@@ -1,0 +1,93 @@
+.DNPSimplesearch{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  width: 100%;
+  padding: 16px 0;
+  margin: 0 auto;
+  @media(--tablet){
+    padding: 1vw 0;
+    max-width: 90vw;
+  }
+  @media(--mobile){
+    max-width: 90vw;
+    padding: 4vw 0;
+    flex-direction: column;
+  }
+  &-info{
+    margin-right: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @media(--tablet){
+      margin-right: 1vw;
+    }
+    @media(--mobile){
+      margin-right: 0;
+      margin-bottom: 2vw;
+    }
+    &-label{
+      @mixin title 0, gris;
+      margin: 0 16px 0 0;
+      @media(--tablet){
+        margin-right: 1vw;
+      }
+
+    }
+    &-input, input&-input{
+      border: solid var(--grisclaro) 1px;
+      border-radius: var(--redondeado_sencillo);
+      font-family: var(--fuente);
+      font-weight: var(--regular);
+      color: var(--gris);
+      display: block;
+      width: 250px;
+      padding: 10px 15px;
+      line-height: 1.3;
+      font-size: 16px;
+      @media(--tablet){
+        width: 17.8vw;
+        padding: 0.7vw 1.0vw;
+        font-size: 1.1vw;
+      }
+      @media(--mobile){
+        width: 48vw;
+        padding: 2.5vw 3.7vw;
+        font-size: 4vw;
+      }
+    }
+  }
+  &-buttons{
+    display: flex;
+    justify-content: flex-end;
+    &-element, input&-element {
+      @mixin button;
+      margin-left: 8px;
+      @media(--tablet){
+        margin-left: .5vw;
+      }
+      @media(--mobile){
+        margin-left: 2vw;
+      }
+    }
+  }
+  &-results{
+    width: 100%;
+    padding: 16px 0;
+    @media(--tablet){
+      padding: 1vw 0;
+    }
+    @media(--mobile){
+      padding: 4vw 0;
+    }
+    &-text{
+      @mixin text 1;
+      margin: 0;
+      & span{
+        @mixin title 1, negro;
+      }
+    }
+  }
+}

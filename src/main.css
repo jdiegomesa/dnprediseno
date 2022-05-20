@@ -1,0 +1,111 @@
+/* Desarrollado por Juan Diego Mesa O. para la OAC del DNP 
+juand.mesa@outlook.com
+juandiegomesa.com */
+
+@import './css/index.css';
+/* Transversales */
+
+@import './css/header.css';
+@import './css/nav.css';
+@import './css/bread.css';
+@import './css/footer.css';
+
+/* Components */
+@import './css/banner.css';
+@import './css/blocks.css';
+@import './css/text.css';
+@import './css/fullfront.css';
+@import './css/imagefull.css';
+@import './css/author.css';
+@import './css/simplesearch.css';
+@import './css/bullets.css';
+@import './css/historical.css';
+@import './css/pager.css';
+@import './css/dropdown.css';
+@import './css/buttons.css';
+@import './css/navtab.css';
+@import './css/navbutton.css';
+@import './css/available.css';
+@import './css/tags.css';
+@import './css/video.css';
+@import './css/gallery.css';
+@import './css/perfil.css';
+@import './css/search.css';
+
+@import './css/slider.css';
+@import './css/window.css';
+@import './css/news.css';
+@import './css/media.css';
+@import './css/docs.css';
+@import './css/sites.css';
+@import './css/drop.css';
+@import './css/content.css';
+@import './css/sidebar.css';
+@import './css/direction.css';
+@import './css/revista.css';
+
+:root{
+  --rojo: #f13835;
+  --azulblanco: #E6EFFD;
+  --amarillo: #FFAB00;
+  --color1: #069169;
+  --color1_85: #069169d9;
+  --color1_75: #069169bf;
+  --color2: #004884;
+  --color2_85: #004884d9;
+  --color2_75: #004884bf;
+  --color3: #3366CC;
+  --color3_85: #3366ccd9;
+  --color3_75: #3366ccbf;
+  --rojo: #A80521;
+  --gris: #535353;
+  --grisclaro: #BABABA;
+  --claro: #F6F8F9;
+  --blanco: #fff;
+  --negro: #000;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+  --redondeado_sencillo: 8px;
+  --redondeado_sencillo_mobile: 3vw;
+  --redondeado_doble: 16px;
+  --redondeado_doble_mobile: 6vw;
+  --fuente: 'Work Sans', sans-serif;
+  --fuentedestacada: 'Montserrat', sans-serif;
+  --color_fuente: #333;
+  /* Fuentes Desktop*/
+  --fuente5: 49px;
+  --fuente4: 39px;
+  --fuente3: 31px;
+  --fuente2: 25px;
+  --fuente1: 20px;
+  --fuente0: 16px;
+  --fuente-1: 13px;
+  --fuente-2: 10px;
+  --fuente-3: 8px;
+  /* Fuentes Tablet*/
+  --fuente5_tablet: 3.5vw;
+  --fuente4_tablet: 2.7vw;
+  --fuente3_tablet: 2.2vw;
+  --fuente2_tablet: 1.71vw;
+  --fuente1_tablet: 1.42vw;
+  --fuente0_tablet: 1.2vw;
+  --fuente-1_tablet: 0.93vw;
+  --fuente-2_tablet: 0.71vw;
+  --fuente-3_tablet: 0.57vw;
+  /* Fuentes Mobile*/
+  --fuente5_mobile: 12.25vw;
+  --fuente4_mobile: 8.5vw;
+  --fuente3_mobile: 7.8vw;
+  --fuente2_mobile: 6.25vw;
+  --fuente1_mobile: 5vw;
+  --fuente0_mobile: 4vw;
+  --fuente-1_mobile: 3.25vw;
+  --fuente-2_mobile: 2.5vw;
+  --fuente-3_mobile: 2vw;
+}
+
+@custom-media --desktop (min-width: 1280px);
+@custom-media --tablet (min-width: 600px) and (max-width: 1200px);
+@custom-media --mobile (max-width: 600px);
+

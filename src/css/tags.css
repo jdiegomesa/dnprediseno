@@ -1,0 +1,25 @@
+.DNPTags{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--fuente2) 0;
+  @media(--tablet){
+    padding: var(--fuente2_tablet) 0;
+  }
+  @media(--mobile){
+    padding: var(--fuente2_mobile) 0;
+  }
+  &-item{
+    @mixin button 0, 0.5, color2;
+    margin: 0 var(--fuente0) var(--fuente0) 0;
+    font-weight: var(--bold);
+    @media(--tablet){
+      margin: 0 1.2vw 1.2vw 0;
+    }
+    @media(--mobile){
+      margin: 0 1.5vw 1.5vw 0;
+    }
+  }
+}

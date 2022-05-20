@@ -1,0 +1,66 @@
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inicio | Departamento Nacional de Planeación</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fin Google Fonts -->
+  <!-- <link rel="stylesheet" href="./css/dnp_styles_v1.4.css"> -->
+  <link rel="stylesheet" href="./css/dnp_gifs.css">
+</head>
+<body>
+  <main role="main">
+
+    <!-- Menú de tabs -->
+    <section class="DNPNavtab">
+      <!-- Tabs -->
+      <nav class="DNPNavtab-menu">
+        <button class="DNPNavtab-menu-element opened" onclick="DNPopen('navtabElement1','DNPNavtab-container-element'); DNPopen('navtabButton1', 'DNPNavtab-menu-element'); return false" id="navtabButton1">
+          <p>Item 1</p>
+        </button>
+        <button class="DNPNavtab-menu-element" onclick="DNPopen('navtabElement2','DNPNavtab-container-element'); DNPopen('navtabButton2', 'DNPNavtab-menu-element'); return false" id="navtabButton2">
+          <p>Item 2</p>
+        </button>
+        <button class="DNPNavtab-menu-element" onclick="DNPopen('navtabElement3','DNPNavtab-container-element'); DNPopen('navtabButton3', 'DNPNavtab-menu-element'); return false" id="navtabButton3">
+          <p>Item 3</p>
+        </button>
+      </nav>
+      <!-- FIN Tabs -->
+      <div class="DNPNavtab-container">
+        <!-- Detalle Item 1 -->
+        <div class="DNPRichtext DNPNavtab-container-element opened" id="navtabElement1">
+          <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero architecto, expedita nihil placeat consequatur officia incidunt ratione corporis quas maiores quaerat deleniti id esse sit vero atque excepturi! Hic, quia.</p>
+        </div>
+        <!-- FIN Detalle Item 1 -->
+        <!-- Detalle Item 2 -->
+        <div class="DNPRichtext DNPNavtab-container-element" id="navtabElement2">
+          <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda repellendus dignissimos omnis, nostrum sunt quia suscipit ratione, ducimus sed reprehenderit hic eligendi ad quas commodi sit accusantium sapiente dolore earum.</p>
+        </div>
+        <!-- FIN Detalle Item 2 -->
+        <!-- Detalle Item 3 -->
+        <div class="DNPRichtext DNPNavtab-container-element" id="navtabElement3">
+          <p>3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla perspiciatis facilis corporis, itaque distinctio placeat culpa in non omnis tempora optio repudiandae ad! Vel natus perspiciatis, quis assumenda eveniet ut.</p>
+        </div>
+        <!-- FIN Detalle Item 3 -->
+      </div>
+    </section>
+    <!-- FIN Menú Tabs -->
+
+  </main>
+  
+  <script type="text/javascript" src="./js/dnp_scripts.js"></script>
+
+  <!--Llamados de desarrollo-->
+  <section id="app"></section>
+  <script type="text/javascript" src="./modules.js"></script>
+  <script type="text/javascript" src="http://localhost:9000/js/app.js"></script>
+  <!--FIN Llamados de desarrollo-->
+
+</body>
+</html>

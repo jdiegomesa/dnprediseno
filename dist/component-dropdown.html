@@ -1,0 +1,75 @@
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inicio | Departamento Nacional de Planeación</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fin Google Fonts -->
+  <!-- <link rel="stylesheet" href="./css/dnp_styles_v1.4.css"> -->
+  <link rel="stylesheet" href="./css/dnp_gifs.css">
+</head>
+<body>
+  
+  <main role="main">
+
+   <!-- Sección Dropdowns -->
+  <section class="DNPDropdown" role="tablist" aria-label="Secciones del concepto jurídico">
+      <div id="DNP_revista1" class="DNPDropdown-element" role="tab" aria-selected="true">
+        <button onclick="DNPopen('DNP_revista1', 'DNPDropdown-element');" aria-label="Expandir o cerrar sección" class="DNPDropdown-element-head">
+          <h3 class="DNPDropdown-element-head-title">Item 1</h3>
+          <div class="DNPDropdown-element-head-button" ></div>
+        </button>
+        <div class="DNPDropdown-element-content DNPRichtext">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis sint maxime nam laboriosam. Quisquam, voluptates maxime. Tempora, voluptate. Nulla harum blanditiis expedita aperiam consequuntur non tenetur mollitia itaque illo eligendi!</p>
+          <h3 class="color1">Hola</h3>
+          <p class="DNPText-small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis sint maxime nam laboriosam. Quisquam, voluptates maxime. Tempora, voluptate. Nulla harum blanditiis expedita aperiam consequuntur non tenetur mollitia itaque illo eligendi!</p>
+          <h4>Hola</h4>
+          <h5>Hola</h5>
+          <h6>Hola</h6>
+          <img src="./img/nota-pactos-apaisada.jpg" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis sint maxime nam laboriosam. Quisquam, voluptates maxime. Tempora, voluptate. Nulla harum blanditiis expedita aperiam consequuntur non tenetur mollitia itaque illo eligendi!</p>
+          <a href="#aa" class="DNPSimplebutton">Hola</a>
+        </div>
+      </div>
+      <div id="DNP_revista2" class="DNPDropdown-element" role="tab" aria-selected="false">
+        <button onclick="DNPopen('DNP_revista2', 'DNPDropdown-element');" aria-label="Expandir o cerrar sección" class="DNPDropdown-element-head">
+          <h3 class="DNPDropdown-element-head-title">Item 2</h3>
+          <div class="DNPDropdown-element-head-button" ></div>
+        </button>
+        <div class="DNPDropdown-element-content DNPRichtext">
+          <p><i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis sint maxime nam laboriosam. Quisquam, voluptates maxime. Tempora, voluptate. Nulla harum blanditiis expedita aperiam consequuntur non tenetur mollitia itaque illo eligendi!</i></p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis sint maxime nam laboriosam. Quisquam, voluptates maxime. Tempora, voluptate. Nulla harum blanditiis expedita aperiam consequuntur non tenetur mollitia itaque illo eligendi!</p>
+        </div>
+      </div>
+      <div id="DNP_revista3" class="DNPDropdown-element" role="tab" aria-selected="false">
+        <button onclick="DNPopen('DNP_revista3', 'DNPDropdown-element');" aria-label="Expandir o cerrar sección" class="DNPDropdown-element-head">
+          <h3 class="DNPDropdown-element-head-title">Item 3</h3>
+          <div class="DNPDropdown-element-head-button" ></div>
+        </button>
+        <div class="DNPDropdown-element-content">
+          <p><i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis sint maxime nam laboriosam. Quisquam, voluptates maxime. Tempora, voluptate. Nulla harum blanditiis expedita aperiam consequuntur non tenetur mollitia itaque illo eligendi!</i></p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis sint maxime nam laboriosam. Quisquam, voluptates maxime. Tempora, voluptate. Nulla harum blanditiis expedita aperiam consequuntur non tenetur mollitia itaque illo eligendi!</p>
+        </div>
+      </div>
+
+  </section>
+  <!-- FIN Sección Dropdowns -->
+
+  </main>
+  
+  <script type="text/javascript" src="./js/dnp_scripts.js"></script>
+
+  <!--Llamados de desarrollo-->
+  <section id="app"></section>
+  <script type="text/javascript" src="./modules.js"></script>
+  <script type="text/javascript" src="http://localhost:9000/js/app.js"></script>
+  <!--FIN Llamados de desarrollo-->
+
+</body>
+</html>

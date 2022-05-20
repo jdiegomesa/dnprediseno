@@ -1,0 +1,268 @@
+
+@define-mixin title $size: 4, $color: color_fuente {
+	color: var(--$color);
+  font-family: var(--fuente);
+  font-weight: var(--bold);
+  font-size: var(--fuente$(size));
+  line-height: 1.1;
+  max-width: 1280px;
+  margin: var(--fuente0) 0;
+  @media(--tablet){
+    max-width: 90vw;
+    font-size: var(--fuente$(size)_tablet);
+  }
+  @media(--mobile){
+    max-width: 90vw;
+    font-size: var(--fuente$(size)_mobile);
+  }
+  &.white, &-white{
+    color: var(--blanco);
+  }
+  &.color1, &-color1{
+    color: var(--color1);
+  }
+  &.color2, &-color2{
+    color: var(--color2);
+  }
+  &.color3, &-color3{
+    color: var(--color3);
+  }
+  &.center, &-center{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.right, &-right{
+    margin-left: auto;
+  }
+}
+
+@define-mixin text $size: 0, $color: color_fuente {
+  color: var(--$color);
+	box-sizing: border-box;
+  font-family: var(--fuente);
+  font-weight: var(--regular);
+  font-size: var(--fuente$(size));
+  line-height: 1.3;
+  max-width: 1280px;
+  margin: 0 auto;
+  @media(--tablet){
+    max-width: 90vw;
+    font-size: var(--fuente$(size)_tablet);
+  }
+  @media(--mobile){
+    max-width: 90vw;
+    font-size: var(--fuente$(size)_mobile);
+  }
+  & a{
+    color: var(--color2);
+    font-weight: var(--bold);
+    text-decoration: underline;
+    &:hover{
+      color: #000;
+    }
+    &:visited{
+      color: var(--color1);
+    }
+  }
+}
+
+@define-mixin button $fontsize: 0, $size: 1, $color: color3, $textcolor: blanco, $hovercolor: color2  {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: var(--fuente);
+  font-weight: var(--regular);
+  color: var(--$color);
+  width: max-content;
+  transition-duration: .5s;
+  border: solid var(--$(color)) 2px;
+  border-radius: 50px;
+  padding: calc(var(--fuente$(fontsize)) * ($(size) * 0.75)) calc(var(--fuente$(fontsize)) * ($(size) * 1.5));
+  font-size: var(--fuente$(fontsize));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media(--tablet){
+    border-radius: 35vw;
+    padding: calc(var(--fuente$(fontsize)_tablet) * ($(size) * 0.75)) calc(var(--fuente$(fontsize)_tablet) * ($(size) * 1.5));
+    font-size: var(--fuente$(fontsize)_tablet);
+  }
+  @media(--mobile){
+    padding: calc(var(--fuente$(fontsize)_mobile) * ($(size) * 0.75)) calc(var(--fuente$(fontsize)_mobile) * ($(size) * 1.5));
+    font-size: var(--fuente$(fontsize)_mobile);
+  }
+  &:visited {
+    border-color: var(--gris);
+    color: var(--gris) !important;
+  }
+  &-color{
+    border-color: var(--$color);
+    background-color: var(--$color);
+    color: var(--$textcolor);
+    &:visited {
+      border-color: var(--$color);
+      color: var(--grisclaro) !important;
+    }
+  }
+  &:hover{
+    background-color: var(--$hovercolor);
+    border-color: var(--$hovercolor);
+    color: var(--blanco);
+    text-decoration: none;
+  }
+  &>img{
+    height: var(--fuente$(fontsize));
+    margin-left: var(--fuente$(fontsize));
+    @media(--tablet){
+      height: var(--fuente$(fontsize)_tablet);
+      margin-left: var(--fuente$(fontsize)_tablet);
+    }
+    @media(--mobile){
+      height: var(--fuente$(fontsize)_mobile);
+      margin-left: var(--fuente$(fontsize)_mobile);
+    }
+  }
+}
+
+/* Sharepoint */
+#s4-workspace{
+  scroll-behavior: smooth !important;
+}
+
+main{
+  width: fit-content;
+  margin: 0 auto;
+}
+/* main input[type=button], main input[type=reset], main input[type=submit], main button{
+  min-width: inherit;
+  padding: inherit;
+  background-color: inherit;
+} */
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1;
+  &:focus{
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+}
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	width: 100vw;
+	overflow-x: hidden;
+}
+a{
+	color: inherit;
+}
+
+.hidden{
+  display: none;
+}
+/* Desactiva gif en menú Inicio */
+#DN_0 .DNPNav-menu-item-submenu{
+  display: none;
+}
+
+.DNPBlock{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  padding: 30px 0;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  @media(--tablet){
+    padding: 2vw 0;
+    width: 90vw;
+  }
+  @media(--mobile){
+    padding: 3vw 0;
+    width: 90vw;
+  }
+  &-center{
+    justify-content: center;
+  }
+  &-between{
+    justify-content: space-between;
+  }
+  &-around{
+    justify-content: space-around;
+  }
+  &-relative{
+    position: relative;
+  }
+}
+
+
+.DNPUp{
+  display: none;
+  position: fixed;
+  z-index: 40;
+  background-color: var(--azulblanco);
+  flex-direction: row;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  bottom: 25px;
+  right: 25px;
+  border-radius: 8px;
+  padding: 10px;
+  @media(--tablet){
+    bottom: 2vw;
+    right: 2vw;
+    border-radius: .8vw;
+    padding: .9vw;
+  }
+  @media(--mobile){
+    bottom: 3vw;
+    right: 3vw;
+    border-radius: 1vw;
+    padding: 1.5vw;
+  }
+  &.show{
+    display: flex;
+  }
+  &-icon{
+    width: 30px;
+    @media(--tablet){
+      width: 3vw;
+    }
+    @media(--mobile){
+      width: 6.5vw;
+    }
+  }
+  &-text{
+    font-family: var(--fuente);
+    color: var(--color2);
+    font-weight: var(--medium);
+    font-size: 18px;
+    transition-duration: 1s;
+    overflow: hidden;
+    max-height: 20px;
+    max-width: 0;
+    @media(--tablet){
+      display: none;
+    }
+    @media(--mobile){
+      display: none;
+    }
+  }
+  &:hover, &:focus{
+    & .DNPUp-text{
+      padding-left: 7px;
+      max-width: 150px;
+    } 
+  }
+}

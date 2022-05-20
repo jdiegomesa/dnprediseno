@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inicio | Departamento Nacional de Planeación</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fin Google Fonts -->
+  <link rel="stylesheet" href="./css/dnp_styles.css">
+</head>
+<body>
+ <!-- Header -->
+  <header class="DNPHeader" id="DNPheader">
+    <div class="DNPHeader-bar">
+      <div class="DNPHeader-container">
+        <a href="https://www.gov.co/" target="_blank">
+          <img src="./assets/logo_govco.svg" alt="Logo Gov.co" class="DNPHeader-bar-logo" />
+        </a>
+      </div>
+    </div>
+    <div class="DNPHeader-brand">
+      <a href="https://dnp.gov.co" class="DNPHeader-brand-logo">
+        <!-- Logo del DNP -->
+        <img src="https://www.dnp.gov.co/estilos/images/logoNuevo.jpg" alt="Logo Departamento Nacional de Planeación">
+      </a>
+      <div class="DNPHeader-brand-search">
+        <!-- Agregar acción de búsqueda -->
+        <form action="">
+          <label for="buscador_dnp" class="hidden">Buscar en el DNP</label>
+          <input id="buscador_dnp" type="text" size="20" name="keywords" placeholder="Buscar" class="DNPHeader-brand-search-input">
+          <input type="submit" value="Buscar" aria-label="Buscar" class="DNPHeader-brand-search-button">
+        </form>
+      </div>
+    </div>
+  </header>
+  <!-- FIN Header -->
+
+  <!-- Navegacion -->
+  <nav class="DNPNav" id="DNPnav" role="navigation">
+    <!-- Boton abrir menú en móvil -->
+    <button aria-label="Botón Abrir/Cerrar" class="DNPNav-button" onclick="DNPopen('DNPnav');" role="button">
+      <img class="DNPNav-button-open" src="./assets/menu_button.svg" alt="Ícono de menú">
+      <img class="DNPNav-button-close" src="./assets/close_button.svg" alt="Ícono de cerrar">
+    </button>
+    <ul role="menubar" class="DNPNav-menu">
+      <li class="DNPNav-menu-item" id="DNPinicio" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPinicio', 'DNPNav-menu-item');"></div>
+        <a href="./index.html" role="link">Inicio</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+
+      <li class="DNPNav-menu-item" id="DNPtransparencia" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPtransparencia', 'DNPNav-menu-item');"></div>
+        <a href="./transparencia.html" role="link">Transparencia y acceso información pública</a>
+        <ul class="DNPNav-menu-item-submenu" >
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPservicios" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPservicios', 'DNPNav-menu-item');"></div>
+        <a href="./servicio-ciudadania.html" role="link">Atención y servicios a la ciudadanía</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPparticipa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPparticipa', 'DNPNav-menu-item');"></div>
+        <a href="./participa.html">Participa</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPentidad" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPentidad', 'DNPNav-menu-item');"></div>
+        <a href="./entidad.html" role="link">La Entidad</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./directivos.html">Directivos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./direcciones.html">Direcciones</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/misi%C3%B3n-visi%C3%B3n-origen">Misión, Visión, Origen</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/funciones-dnp">Funciones DNP</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/c%C3%B3digo-de-integridad">Código de integridad</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/objetivos">Objetivos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/planeacion-y-gestion-institucional">Planeación y gestión institucional</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/operaciones-recIprocas">Operaciones recíprocas</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/organigrama">Organigrama</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/contrataci%C3%B3n">Contratación</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/desarrollo-del-talento-humano">Desarrollo de talento humano</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/gesti%C3%B3n-documental">Gestión documental</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/participaci%C3%B3n-privada-en-proyectos-de-infraestructura">Participación privada en proyectos de infraestructura</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.datos.gov.co/browse?Informaci%C3%B3n-de-la-Entidad_Nombre-de-la-Entidad=Departamento+Nacional+de+Planeaci%C3%B3n&q=dnp&sortBy=relevance&utf8=%E2%9C%93">Datos abiertos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/factura-electr%C3%B3nica">Factura electrónica</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPnormativa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPnormativa', 'DNPNav-menu-item');"></div>
+        <a role="link" href="./normativa.html">Normativa</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./decreto.html">Decreto único reglamentario 1082 de 26 de mayo 2015</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/proyectos-de-normatividad">Proyectos de normatividad </a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/normograma">Normograma</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.sgr.gov.co/normativa.aspx">Sistema General de Regalías</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/leyes-plan-nacional-de-desarrollo">Leyes Plan Nacional de Desarrollo</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPprensa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPprensa', 'DNPNav-menu-item');"></div>
+        <a href="./prensa.html" role="link">Prensa</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/sala-de-prensa/Paginas/Comunicados.aspx#Default=%7B%22k%22:%22SPContentType:Slider%20de%20Noticias%22,%22o%22:%5B%7B%22d%22:1,%22p%22:%22DNPFechaPublicacion%22%7D%5D%7D">Comunicados</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.flickr.com/photos/142236467@N07/" target="_blank">Imágenes</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://soundcloud.com/redes-planeacion-nacional" target="_blank">Audios</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank">Videos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank">DNP Noticias</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/prensa/presentaciones">Presentaciones</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/prensa/publicaciones">Publicaciones</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+  <!-- FIN Navegacion -->
+
+<main role="main">
+  <!-- Cabecera Revista -->
+  <section class="DNPRevista-head">
+    <div class="DNPRevista-head-info">
+      <p class="DNPRevista-head-info-flag">Edición 1</p>
+      <p class="DNPRevista-head-info-date">Febrero 5 de 2022</p>
+    </div>
+    <h1 class="DNPRevista-head-title">Revista Jurídica</h1>
+    <p class="DNPRevista-head-subtitle">Revista jurídica espacio destinado para el slogan</p>
+  </section>
+  <!-- FIN cabecera revista -->
+  <!-- Navegación revista -->
+  <nav>
+    <ul class="DNPRevista-nav">
+      <li class="DNPRevista-nav-element">
+        <a href="./revistajuridica_editoriales.html">Editorial</a>
+      </li>
+      <li class="DNPRevista-nav-element opened">
+        <a href="./revistajuridica_articulos.html">Articulos especializados</a>
+      </li>
+      <li class="DNPRevista-nav-element">
+        <a href="./revistajuridica_conceptos.html">Conceptos jurídicos</a>
+      </li>
+      <li class="DNPRevista-nav-element">
+        <a href="./revistajuridica_avances.html">Avances normativos</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- FIN Navegación revista -->
+  <section class="DNPRevista-fullcontent">
+    <h2 class="DNPRevista-fullcontent-title">Inversión de $2.5 billones en La Mojana para mitigar afectaciones por inundaciones</h2>
+    <div class="DNPRevista-fullcontent-cont">
+      <div class="DNPRevista-fullcontent-content DNPRevista-fullcontent-content-arti">
+        <img src="./img/galeria2.jpg" alt="" class="DNPRevista-fullcontent-content-image">
+        <h3 class="DNPRevista-fullcontent-content-title DNPRevista-fullcontent-content-title-arti">En resumen</h3>
+        <p class="DNPRevista-fullcontent-content-date">Febrero 1 de 2022</p>
+        <div class="DNPRevista-fullcontent-content-info">
+          <p>La Constitución Política en su Artículo 340 estipula que el Consejo Nacional de Planeación -CNP- y los consejos territoriales de planeación -CTP- constituyen el Sistema Nacional de Planeación -SNP-. El dicho sistema, en entender de algunos agentes, no ha sido objeto de una reglamentación puntual, por lo que existen serias dudas en relación con las reglas que han de disciplinar su funcionamiento.</p>
+          <p>Este concepto, surgido de la inquietud de algunos de los miembros de los CTP, aborda la noción de SNP, por lo que analiza los elementos normativos que habrían de tenerse en cuenta de cara a una eventual reglamentación de su funcionamiento, lo mismo que a su formalización institucional. </p>
+          <p>Al respecto, se pone de presente que es cierto que el SNP no ha sido objeto de reglamentación por medio de un acto administrativo. Lo anterior, sin embargo, no es sinónimo de falta de voluntad política del Ejecutivo en esta materia, sino el resultado de la falta de habilitación formal al respecto en los términos de la Ley Orgánica de Planeación, la cual no contempló en su articulado las competencias y funciones del SNP, sino que se limitó a desarrollar las labores misionales de los organismos que lo componen, esto es el CNP y los CTP.</p>
+        </div>
+        <div class="DNPRevista-fullcontent-content-buttons">
+          <a href="#" class="DNPRevista-fullcontent-content-buttons-element DNPRevista-fullcontent-content-buttons-element-color">Ver el artículo completo</a>
+          <a href="#" class="DNPRevista-fullcontent-content-buttons-element">Ver otros articulos especializados</a>
+      </div>
+      
+      </div>
+      <div class="DNPRevista-fullcontent-cont-sidebar">
+        <img class="DNPRevista-fullcontent-cont-sidebar-foto" src="./img/avatar_direccion.png" alt="NOMBRE DEL AUTOR"/>
+        <h3 class="DNPRevista-fullcontent-cont-sidebar-name">Álvaro Namén Vargas</h3>
+        <p class="DNPRevista-fullcontent-cont-sidebar-cargo">Cargo de la persona</p>
+        <p class="DNPRevista-fullcontent-cont-sidebar-text">bla  joasdhafjdshfgifhjkhfvvosdvh wfhdiuhefuhsuishuisdc hsdufihcñdsbla</p>
+        <p class="DNPRevista-fullcontent-cont-sidebar-text">Al respecto, se pone de presente que es
+           cierto que el SNP no ha sido objeto de reglamentación por medio de un acto administrativo.
+            Lo anterior, sin embargo, no es sinónimo de falta de voluntad política del Ejecutivo en esta materia,
+            sino el resultado de la falta de habilitación formal al respecto en los términos de la Ley Orgánica de Planeación,
+            la cual no contempló en su articulado las competencias y funciones del SNP, sino que se limitó a desarrollar las labores
+            misionales de los organismos que lo componen, esto es el CNP y los CTP.</p>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+
+  <!-- Footer -->
+  <footer class="DNPFooter" role="contentinfo">
+    <div class="DNPFooter-info">
+      <div class="DNPFooter-info-container">
+        <h2 class="hidden">Pié de página - Más del DNP</h2>
+        <h3 class="DNPFooter-info-title">Departamento Nacional de Planeación</h3>
+        <div class="DNPFooter-info-logos">
+          <img src="https://www.dnp.gov.co/estilos/images/logoNuevo.jpg" alt="Logo Departamento Nacional de Planeación" class="DNPFooter-info-logos-element">
+          <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="Ir a La Rebeca">
+            <img src="./assets/boton_la_rebeca.svg" alt="Logo La Rebeca" class="DNPFooter-info-logos-element">
+          </a>
+        </div>
+        <div class="DNPFooter-info-data">
+          <h4 class="DNPFooter-info-data-title">Sede principal</h4>
+          <p class="DNPFooter-info-data-text">Dirección: Calle 26 # 13-19 - Edificio ENTerritorio / Bogotá D.C., Colombia</p>
+          <p class="DNPFooter-info-data-text">Código Postal: 110311</p>
+          <p class="DNPFooter-info-data-text">Horario de Atención: Lunes a viernes 8:00 a.m. a 4:30 p.m. jornada continua</p>
+          <p class="DNPFooter-info-data-text">Teléfono Conmutador: +57 (1) 381 50 00</p>
+          <p class="DNPFooter-info-data-text">Línea Gratuita: 01 8000 12 12 21</p>
+          <p class="DNPFooter-info-data-text">Buzón de notificaciones DNP: notificacionesjudiciales@dnp.gov.co</p>
+          <p class="DNPFooter-info-data-text"></p>
+        </div>
+        <div class="DNPFooter-info-social">
+          <a href="https://twitter.com/DNP_Colombia" class="DNPFooter-info-social-element tw">@DNP_Colombia</a>
+          <a href="https://www.instagram.com/dnp_colombia/" target="_blank" class="DNPFooter-info-social-element ig">@dnp_colombia</a>
+          <a href="https://www.facebook.com/departamentonacionaldeplaneacion/" target="_blank" class="DNPFooter-info-social-element fb">@DNPColombia</a>
+          <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank" class="DNPFooter-info-social-element yt">DNP Colombia</a>
+          <a href="https://www.linkedin.com/company/departamento-nacional-de-planeacion/" target="_blank" class="DNPFooter-info-social-element in">Departamento Nacional de Planeación</a>
+        </div>
+        <div class="DNPFooter-info-social">
+          <a href="/Politica-de-seguridad/#terminos-y-condiciones" class="DNPFooter-info-social-link">Terminos y condiciones</a>
+          <a href="/Politica-de-seguridad/#politica-de-privacidad" class="DNPFooter-info-social-link">Política de privadicad</a>
+          <a href="/Politica-de-seguridad/#politica-derechos-de-autor" class="DNPFooter-info-social-link">Política de derechos de autor</a>
+          <a href="/mapa-del-sitio" class="DNPFooter-info-social-link">Mapa del sitio</a>
+          <!--<a href="/Accesibilidad" class="DNPFooter-info-social-link">Accesibilidad</a>!-->
+          <a href="/_layouts/15/Authenticate.aspx" class="DNPFooter-info-social-link">Inicio de sesión</a>
+          <a href="https://portal.microsoftonline.com/" class="DNPFooter-info-social-link" target="_blank">Correo institucional</a>
+        </div>
+      </div>
+    </div>
+    <div class="DNPFooter-bar">
+      <div class="DNPFooter-bar-container">
+        <img src="./assets/colombia_co.png" alt="Logo Marca Colombia" class="DNPFooter-bar-logo border">
+        <a href="https://www.gov.co/" target="_blank">
+          <img src="./assets/logo_govco.svg" alt="Logo Gov.co" class="DNPFooter-bar-logo">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- FIN Footer -->
+  <!-- Botón Volver arriba -->
+  <button class="DNPUp" id="DNPUp" onclick="DNPscroll('DNPheader');">
+    <img src="./assets/up-button.svg" alt="Flecha hacia arriba" class="DNPUp-icon">
+    <p class="DNPUp-text">Volver arriba</p>
+  </button>
+  <!-- FIN Botón Volver arriba -->
+  <script type="text/javascript" src="./js/dnp_scripts.js"></script>
+
+</body>
+</html>

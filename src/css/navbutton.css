@@ -1,0 +1,92 @@
+.DNPNavbutton{
+  width: 100%;
+  max-width: 1280px;
+  @media(--tablet){
+    max-width: 90vw;
+  }
+  @media(--mobile){
+    max-width: 90vw;
+  }
+  &-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: var(--fuente2) auto;
+    @media(--tablet){
+      margin: var(--fuente2_tablet) auto;
+    }
+    @media(--mobile){
+      margin: var(--fuente2_mobile) auto;
+      justify-content: space-evenly;
+    }
+    &-element{
+      text-decoration: none;
+      cursor: pointer;
+      font-family: var(--fuente);
+      font-weight: var(--regular);
+      width: auto;
+      max-width: 235px;
+      border-color: var(--color3);
+      background-color: var(--color3);
+      color: var(--blanco);
+      transition-duration: .5s;
+      border: solid var(--color3) 2px;
+      padding: calc(var(--fuente0) * (1.2 * 0.75)) calc(var(--fuente0) * (1.2 * 1.2));
+      font-size: var(--fuente0);
+      border-radius: var(--redondeado_doble);
+      text-align: center;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-right: 7px;
+      margin-bottom: 7px;
+      @media(--tablet){
+        padding: calc(var(--fuente0_tablet) * (1.2 * 0.75)) calc(var(--fuente0_tablet) * (1.2 * 1.2));
+        font-size: var(--fuente0_tablet);
+        max-width: 16.78vw;
+        margin-right: .5vw;
+        margin-bottom: .5vw;
+      }
+      @media(--mobile){
+        padding: calc(var(--fuente0_mobile) * (1 * 0.75)) calc(var(--fuente0_mobile) * (0.6 * 1.2));
+        font-size: var(--fuente-1_mobile);
+        border-radius: var(--redondeado_sencillo_mobile);
+        max-width: 44vw;
+        margin-right: 1vw;
+        margin-bottom: 1.8vw;
+      }
+      &.opened, &:hover, &:focus{
+        background-color: var(--color2);
+        border-color: var(--color2);
+        color: var(--blanco);
+        text-decoration: none;
+      }
+    }
+  }
+  &-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    &-element{
+      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+      transform-origin: top center;
+      max-height: 0;
+      overflow: hidden;
+      order: 1;
+      &:not(.opened){
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+      &.opened, &:focus-within{
+        transition: max-height 1s ease-in-out;
+        max-height: 1000vh;
+        order: 0;
+      }
+    }
+  }
+}

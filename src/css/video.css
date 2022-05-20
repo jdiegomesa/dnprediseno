@@ -1,0 +1,61 @@
+.DNPSinglevideo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 1280px;
+  padding: var(--fuente3) 0;
+  @media(--tablet){
+    width: 90vw;
+    padding: var(--fuente3_tablet) 0;
+  }
+  @media(--mobile){
+    width: 90vw;
+    padding: 0;
+    flex-direction: column;
+  }
+  &-info{
+    width: 400px;
+    padding: var(--fuente1) 80px 0;
+    box-sizing: content-box;
+    @media(--tablet){
+      width: 28.5vw;
+      padding: var(--fuente1_tablet) 5.71vw 0;
+    }
+    @media(--mobile){
+      width: 90vw;
+      padding: var(--fuente1_mobile) 0;
+    }
+    &-text{
+      margin: var(--fuente0) 0;
+    }
+    & .DNPSimplebutton{
+      margin-left: 0;
+    }
+  }
+  &-video{
+    width: 718px;
+    height: 404px;
+    @media(--tablet){
+      width: 51.2vw;
+      height: 28.8vw;
+    }
+    @media(--mobile){
+      width: 90vw;
+      height: 50.6vw;
+    }
+  }
+}
+.DNPVideo{
+  width: 915px;
+  height: 515px;
+  @media(--tablet){
+    width: 65.36vw;
+    height: 36.79vw;
+  }
+  @media(--mobile){
+    width: 90vw;
+    height: 50.6vw;
+  }
+}

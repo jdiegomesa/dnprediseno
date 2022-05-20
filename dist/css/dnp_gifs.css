@@ -1,0 +1,27 @@
+#DN_0 .DNPNav-menu-item-submenu{
+  display: none;
+}
+#DN_1 .DNPNav-menu-item-submenu:before{
+  background-image: url('https://colaboracion.dnp.gov.co/CDT/PublishingImages/lenguaje_senas_sedeelectronica/transparencia.gif');
+  background-size: cover;
+}
+#DN_2 .DNPNav-menu-item-submenu:before{
+  background-image: url('https://colaboracion.dnp.gov.co/CDT/PublishingImages/lenguaje_senas_sedeelectronica/atencion.gif');
+  background-size: cover;
+}
+#DN_3 .DNPNav-menu-item-submenu:before{
+  background-image: url('https://colaboracion.dnp.gov.co/CDT/PublishingImages/lenguaje_senas_sedeelectronica/participa.gif');
+  background-size: cover;
+}
+#DN_4 .DNPNav-menu-item-submenu:before{
+  background-image: url('https://colaboracion.dnp.gov.co/CDT/PublishingImages/lenguaje_senas_sedeelectronica/entidad.gif');
+  background-size: cover;
+}
+#DN_5 .DNPNav-menu-item-submenu:before{
+  background-image: url('https://colaboracion.dnp.gov.co/CDT/PublishingImages/lenguaje_senas_sedeelectronica/normativa.gif');
+  background-size: cover;
+}
+#DN_6 .DNPNav-menu-item-submenu:before{
+  background-image: url('https://colaboracion.dnp.gov.co/CDT/PublishingImages/lenguaje_senas_sedeelectronica/prensa.gif');
+  background-size: cover;
+}

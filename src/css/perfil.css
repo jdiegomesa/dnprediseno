@@ -1,0 +1,122 @@
+.DNPPerfil{
+  &-simple{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 1280px;
+    padding: var(--fuente0) 0;
+    margin: var(--fuente1) auto 0;
+    @media(--tablet){
+      width: 90vw;
+      padding: var(--fuente0_tablet) 0;
+      margin-top: var(--fuente1_tablet);
+    }
+    @media(--mobile){
+      width: 90vw;
+      padding: 2vw 0;
+      margin-top: 2vw;
+      flex-direction: column;
+    }
+    &-image{
+      object-fit: cover;
+      width: 450px;
+      height: 450px;
+      @media(--tablet){
+        width: 32.1vw;
+        height: 32.1vw;
+      }
+      @media(--mobile){
+        width: 90vw;
+        height: 90vw;
+      }
+    }
+    &-info{
+      width: 720px;
+      padding: 0 40px;
+      @media(--tablet){
+        width: 51.4vw;
+        padding: 0 2.85vw;
+      }
+      @media(--mobile){
+        width: 90vw;
+        padding: 5vw 0;
+      }
+      &-name{
+        @mixin title 3, color2;
+        margin: 0;
+        padding-bottom: 5px;
+        @media(--tablet){
+          padding-bottom: .5vw;
+        }
+        @media(--mobile){
+          padding-bottom: 1.5vw;
+        }
+      }
+      &-position{
+        @mixin title 1, color3;
+        margin-top: 0;
+      }
+    }
+  }
+  &-big{
+    width: 1280px;
+    padding: var(--fuente0) 0;
+    margin: var(--fuente1) auto 0;
+    @media(--tablet){
+      width: 90vw;
+      padding: var(--fuente0_tablet) 0;
+      margin-top: var(--fuente1_tablet);
+    }
+    @media(--mobile){
+      width: 90vw;
+      padding: 2vw 0;
+      margin-top: 2vw;
+    }
+    &-title{
+      &-name{
+        @mixin title 4, color2;
+        margin: 0;
+        padding-bottom: 5px;
+        @media(--tablet){
+          padding-bottom: .5vw;
+        }
+        @media(--mobile){
+          padding-bottom: 1.5vw;
+        }
+      }
+      &-position{
+        @mixin title 2, color3;
+        margin-top: 0;
+        @media(--mobile){
+          font-size: var(--fuente1_mobile);
+        }
+      }
+    }
+    &-image{
+      object-fit: cover;
+      width: 1280px;
+      height: 450px;
+      @media(--tablet){
+        width: 90vw;
+        height: 32.1vw;
+      }
+      @media(--mobile){
+        width: 90vw;
+        height: 70vw;
+      }
+    }
+    &-info{
+      width: 100%;
+      padding: var(--fuente3) 0;
+      @media(--tablet){
+        padding: var(--fuente3_tablet) 0;
+      }
+      @media(--mobile){
+        padding: var(--fuente3_mobile) 0;
+      }
+      
+    }
+  }
+}

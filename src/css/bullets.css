@@ -1,0 +1,29 @@
+.DNPBullets{
+  background-color: var(--azulblanco);
+  border-radius: var(--redondeado_sencillo);
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin: 14px auto;
+  padding: 21px;
+  @media(--tablet){
+    margin: 1vw auto;
+    padding: 1.5vw;
+  }
+  @media(--mobile){
+    margin: 3vw auto;
+    padding: 5vw;
+  }
+  & ul>li{
+    @mixin text;
+    list-style-type: disc;
+    color: var(--color_fuente);
+    margin: 14px 0 0 21px;
+    @media(--tablet){
+      margin: 1vw 0 0 1.5vw;
+    }
+    @media(--mobile){
+      margin: 3vw 0 0 5vw;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.DNPBanner{
+  width: 100vw;
+  margin: 0 auto;
+  background-color: var(--azulblanco);
+  border-bottom: 3px solid var(--color3);
+  @media(--tablet){
+    border-bottom-width: 1vw;
+  }
+  @media(--mobile){
+    border-bottom: none;
+  }
+  &-image{
+    display: block;
+    margin: 0 auto;
+    width: 100vw;
+    max-width: 1920px;
+    box-sizing: content-box;
+  }
+}

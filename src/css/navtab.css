@@ -1,0 +1,90 @@
+.DNPNavtab{
+  &-menu{
+    width: 100%;
+    max-width: 1280px;
+    margin: 36px auto;
+    border-bottom: solid 3px var(--claro);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    @media(--tablet){
+      max-width: 90vw;
+      margin: 2.5vw auto;
+      border-bottom-width: .2vw;
+    }
+    @media(--mobile){
+      max-width: 90vw;
+      margin: 3vw auto;
+      flex-wrap: wrap; 
+    }
+    &-element{
+      background-color: transparent;
+      text-align: center;
+      list-style: none;
+      display: flex;
+      cursor: pointer;
+      min-width: 150px;
+      border: solid 1px var(--claro);
+      margin-bottom: -3px;
+      margin-right: 5px;
+      @media(--tablet){
+        min-width: 10.7vw;
+        border-width: .1vw;
+        margin-bottom: -.25vw;
+        margin-right: .35vw;
+      }
+      @media(--mobile){
+        min-width: 90vw;
+        border-width: 0.2vw;
+        margin-bottom: -.25vw;
+        margin-right: 0;
+      }
+      & a, & p{
+        font-family: var(--fuente);
+        font-weight: var(--regular);
+        color: var(--color1);
+        text-align: center;
+        transition-duration: .5s;
+        width: 100%;
+        padding: 20px 48px;
+        font-size: 16px;
+        margin: 0;
+        @media(--tablet){
+          padding: 1.4vw 3.4vw;
+          font-size: 1.2vw;
+        }
+        @media(--mobile){
+          padding: 5vw 10vw;
+          font-size: 4vw;
+        }
+      }
+      &.opened, &:hover, &:focus{
+        & a, & p{
+          font-weight: var(--bold);
+          background-color: var(--claro);
+          border-bottom: solid 3px var(--color1);
+          color: var(--color1);
+          text-decoration: none;
+          @media(--tablet){
+            border-bottom-width: .25vw;
+          }
+          @media(--mobile){
+            border-bottom-width: 1vw;
+          }
+        }
+      }
+    }
+  }
+  &-container{
+    &-element{
+      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+      transform-origin: top center;
+      max-height: 0;
+      overflow: hidden;
+      &.opened, &:focus-within{
+        transition: max-height 1s ease-in-out;
+        max-height: 1000vh;
+      }
+    }
+  }
+}

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Podcast | Departamento Nacional de Planeación</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fin Google Fonts -->
+  <!-- <link rel="stylesheet" href="./css/dnp_styles_v1.4.css"> -->
+</head>
+<body>
+ <!-- Header -->
+  <header class="DNPHeader" id="DNPheader">
+    <div class="DNPHeader-bar">
+      <div class="DNPHeader-container">
+        <a href="https://www.gov.co/" target="_blank">
+          <img src="./assets/logo_govco.svg" alt="Logo Gov.co" class="DNPHeader-bar-logo" />
+        </a>
+      </div>
+    </div>
+    <div class="DNPHeader-brand">
+      <a href="https://dnp.gov.co" class="DNPHeader-brand-logo">
+        <!-- Logo del DNP -->
+        <img src="https://www.dnp.gov.co/estilos/images/logoNuevo.jpg" alt="Logo Departamento Nacional de Planeación">
+      </a>
+      <div class="DNPHeader-brand-search">
+        <!-- Agregar acción de búsqueda -->
+        <form action="">
+          <label for="buscador_dnp" class="hidden">Buscar en el DNP</label>
+          <input id="buscador_dnp" type="text" size="20" name="keywords" placeholder="Buscar" class="DNPHeader-brand-search-input">
+          <input type="submit" value="Buscar" aria-label="Buscar" class="DNPHeader-brand-search-button">
+        </form>
+      </div>
+    </div>
+  </header>
+  <!-- FIN Header -->
+
+  <!-- Navegacion -->
+  <nav class="DNPNav" id="DNPnav" role="navigation">
+    <!-- Boton abrir menú en móvil -->
+    <button aria-label="Botón Abrir/Cerrar" class="DNPNav-button" onclick="DNPopen('DNPnav');" role="button">
+      <img class="DNPNav-button-open" src="./assets/menu_button.svg" alt="Ícono de menú">
+      <img class="DNPNav-button-close" src="./assets/close_button.svg" alt="Ícono de cerrar">
+    </button>
+    <ul role="menubar" class="DNPNav-menu">
+      <li class="DNPNav-menu-item" id="DNPinicio" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPinicio', 'DNPNav-menu-item');"></div>
+        <a href="./index.html" role="link">Inicio</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+
+      <li class="DNPNav-menu-item" id="DNPtransparencia" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPtransparencia', 'DNPNav-menu-item');"></div>
+        <a href="./transparencia.html" role="link">Transparencia y acceso información pública</a>
+        <ul class="DNPNav-menu-item-submenu" >
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPservicios" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPservicios', 'DNPNav-menu-item');"></div>
+        <a href="./servicio-ciudadania.html" role="link">Atención y servicios a la ciudadanía</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPparticipa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPparticipa', 'DNPNav-menu-item');"></div>
+        <a href="./participa.html">Participa</a>
+        <ul class="DNPNav-menu-item-submenu">
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPentidad" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPentidad', 'DNPNav-menu-item');"></div>
+        <a href="./entidad.html" role="link">La Entidad</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./directivos.html">Directivos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./direcciones.html">Direcciones</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/misi%C3%B3n-visi%C3%B3n-origen">Misión, Visión, Origen</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/funciones-dnp">Funciones DNP</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/c%C3%B3digo-de-integridad">Código de integridad</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/objetivos">Objetivos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/planeacion-y-gestion-institucional">Planeación y gestión institucional</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/operaciones-recIprocas">Operaciones recíprocas</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/organigrama">Organigrama</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/contrataci%C3%B3n">Contratación</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/desarrollo-del-talento-humano">Desarrollo de talento humano</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/gesti%C3%B3n-documental">Gestión documental</a>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/participaci%C3%B3n-privada-en-proyectos-de-infraestructura">Participación privada en proyectos de infraestructura</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.datos.gov.co/browse?Informaci%C3%B3n-de-la-Entidad_Nombre-de-la-Entidad=Departamento+Nacional+de+Planeaci%C3%B3n&q=dnp&sortBy=relevance&utf8=%E2%9C%93">Datos abiertos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/la-entidad/factura-electr%C3%B3nica">Factura electrónica</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPnormativa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPnormativa', 'DNPNav-menu-item');"></div>
+        <a role="link" href="./normativa.html">Normativa</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="./decreto.html">Decreto único reglamentario 1082 de 26 de mayo 2015</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/proyectos-de-normatividad">Proyectos de normatividad </a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/normograma">Normograma</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.sgr.gov.co/normativa.aspx">Sistema General de Regalías</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/normativa/leyes-plan-nacional-de-desarrollo">Leyes Plan Nacional de Desarrollo</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <li class="DNPNav-menu-item" id="DNPprensa" role="menuitem" aria-haspopup="true">
+        <div class="DNPNav-menu-item-corner" onclick="DNPopen('DNPprensa', 'DNPNav-menu-item');"></div>
+        <a href="./prensa.html" role="link">Prensa</a>
+        <ul class="DNPNav-menu-item-submenu" role="menu">
+          <div class="DNPNav-menu-item-submenu-container">
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/sala-de-prensa/Paginas/Comunicados.aspx#Default=%7B%22k%22:%22SPContentType:Slider%20de%20Noticias%22,%22o%22:%5B%7B%22d%22:1,%22p%22:%22DNPFechaPublicacion%22%7D%5D%7D">Comunicados</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.flickr.com/photos/142236467@N07/" target="_blank">Imágenes</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://soundcloud.com/redes-planeacion-nacional" target="_blank">Audios</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank">Videos</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank">DNP Noticias</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/prensa/presentaciones">Presentaciones</a>
+            </li>
+            <li class="DNPNav-menu-item-submenu-item" role="menuitem">
+              <a href="https://www.dnp.gov.co/DNPN/prensa/publicaciones">Publicaciones</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+  <!-- FIN Navegacion -->
+
+<main role="main">
+  <ul class="DNPBread"></ul>
+  <p class="DNPText-regular">Episodio 1</p>
+  <h1 class="DNPText-bigtitle DNPText-bigtitle-color2">D de desarrollo urbano</h1>
+  <!-- Spreaker -->
+  <iframe class="DNPImagefull" src="https://widget.spreaker.com/player?episode_id=49353352&theme=light&playlist=false" width="100%" height="200px" frameborder="0"></iframe>
+  <!-- Bloque contenido -->
+  <div class="DNPContent">
+    <!-- Menú de tabs -->
+    <section class="DNPNavtab">
+      <!-- Tabs -->
+      <nav class="DNPNavtab-menu">
+        <button class="DNPNavtab-menu-element opened" onclick="DNPopen('navtabElement1','DNPNavtab-container-element'); DNPopen('navtabButton1', 'DNPNavtab-menu-element'); return false" id="navtabButton1">
+          <p>Artículo relacionado</p>
+        </button>
+        <button class="DNPNavtab-menu-element" onclick="DNPopen('navtabElement2','DNPNavtab-container-element'); DNPopen('navtabButton2', 'DNPNavtab-menu-element'); return false" id="navtabButton2">
+          <p>Transcripción del episodio</p>
+        </button>
+      </nav>
+      <!-- FIN Navegación revista -->
+      <div class="DNPNavtab-container">
+        <!-- Artículo -->
+        <div class="DNPRichtext DNPNavtab-container-element opened" id="navtabElement1">
+        <p>Este es el primer episodio de <strong>“De la D a la P”</strong>, el <strong>pódcast </strong>del <strong>Departamento Nacional de Planeación </strong>del Gobierno de Colombia. Aquí vamos a construir un abecé sonoro del DNP, con un tema central para cada episodio, que coincidirá con las letras del alfabeto, desde la ‘D’ de desarrollo urbano —en este episodio de estreno—, hasta la ‘P’ de planeación —en la última entrega.</p>
+
+        <p>Conversaremos con expertos del DNP y también con otras voces que nos ayudarán a entender cada tema y su impacto en la vida de los colombianos. </p>
+
+        <p>En este episodio contamos con la participación de<strong> Nohra Padilla</strong>, presidente de la Asociación Nacional de Recicladores de Colombia; <strong>Isabel Cristina Riveros</strong>, directora de la Cámara de la Industria de Pulpa, Papel y Cartón de la ANDI, y <strong>Redy Alfonso López</strong>, director de Desarrollo Urbano en el Departamento Nacional de Planeación.</p>
+
+        <p>Redy López presenta una definición concreta del desarrollo urbano: <strong>“es ese estudio y análisis de la relación que se da entre los seres humanos que habitan las ciudades o el territorio y el ambiente construido”</strong>.</p>
+
+        <p><strong>López también resalta la necesidad de comprender el desarrollo urbano más allá de la arquitectura</strong>, para dar cabida a enfoques tanto interdisciplinarios como intersectoriales.</p>
+
+        <p>Particularmente, la <strong>Dirección de Desarrollo Urbano del DNP </strong>trabaja enel diseño, la coordinación, el seguimiento y la evaluación de las <strong>políticas relacionadas con vivienda y agua potable y saneamiento básico</strong>.</p>
+
+        <p>En esta medida, <strong>el reciclaje es un tema transversal para el desarrollo urbano y el bienestar de los habitantes de las ciudades</strong>, de cara al presente y al futuro. Por esta razón el DNP ha trabajado en documentos como el Conpes 3874, “cuyo objetivo es el de implementar la gestión integral de los residuos sólidos como una política nacional de interés social, económico, ambiental y sanitario que contribuya al fomento de la economía circular, al desarrollo sostenible, la adaptación y mitigación al cambio climático”, explica Redy López.</p>
+
+        <p><strong>Se trata de un objetivo que requiere de un trabajo articulado con actores clave</strong>, como los recicladores, la ciudadanía y, por supuesto, el sector privado, entre otros.</p>
+
+        <p>Por parte del sector privado, son varios los esfuerzos que apuntan hacia una economía cada vez más circular, como lo explica Isabel Riveros: “<strong>el reciclaje es una de las alternativas para pasar de un modelo lineal de producción a uno circular</strong>, en el que los residuos del consumo o de la producción se incorporan dentro de un mismo proceso o de un proceso diferente de insumos”.</p>
+
+        <p>Por supuesto, <strong>los recicladores constituyen un actor clave en esta transición</strong>, pero su labor requiere del respaldo de toda la cadena. Un respaldo que se traduce en empoderamiento, como lo comenta Nohra Padilla en este episodio de “De la D a la P”: “si el Departamento Nacional de Planeación, que lidera muchas gestiones de desarrollo en el país, da señales de empoderamiento, da señales de fortalecimiento de determinados sectores, como en el caso del reciclaje, pues esas son señales que necesariamente los municipios acogen y empiezan a desarrollar”.</p>
+
+        <p><strong>Hablar de desarrollo urbano es hablar del futuro de las ciudades y del bienestar de sus habitantes</strong>, un bienestar que depende de varios factores, y el reciclaje es probablemente uno de los más importantes.</p>
+
+        </div>
+        <!-- Transcipción -->
+        <div class="DNPRichtext DNPNavtab-container-element" id="navtabElement2">
+        <p><strong>Juan Montes:</strong> Este es el primer episodio de “De la D a la P”, el pódcast del Departamento Nacional de Planeación del Gobierno de Colombia. Aquí vamos a construir un abecé sonoro del DNP, con un tema central para cada episodio, que coincidirá con las letras del alfabeto, desde la ‘D’ de desarrollo urbano —en este episodio de estreno—, hasta la ‘P’ de planeación —en la última entrega.</p>
+
+<p>Conversaremos con expertos del DNP y también con otras voces que nos ayudarán a entender cada tema y su impacto en la vida de los colombianos. </p>
+
+<p>Comenzamos de una vez con nuestro primer tema, con la letra ‘d’, de desarrollo urbano.</p>
+
+<p><strong>Redy Adolfo López:</strong> El desarrollo urbano tiene varias interpretaciones, pero digamos que aquí valdría la pena mencionar que es ese estudio y análisis de la relación que se da entre los seres humanos que habitan las ciudades o el territorio y el ambiente construido...</p>
+
+<p><strong>Juan Montes: </strong>Él es Redy Adolfo López.</p>
+
+<p><strong>Redy Adolfo López: </strong>Soy el director de Desarrollo Urbano en el Departamento Nacional de Planeación. </p>
+
+<p><strong>Redy Adolfo López: </strong>… entonces, es muy importante porque lo que hemos visto en los últimos años es un acelerado crecimiento demográfico y en la medida en que va aumentando la población, se van generando presiones muy importantes sobre la demanda de bienes y servicios y, en particular, de los recursos naturales. Esto se observa mucho más acentuado en las ciudades, entonces por eso es que el tema del desarrollo urbano ha adquirido una gran relevancia.</p>
+
+<p>Uno ve las cifras del censo de 2018 y lo que se observa es que el 77 % de la población es urbana.</p>
+
+<p>Y también con unos estudios que adelantamos entre 2012 y 2014, a través de la Misión de Ciudades, lo que muestran las proyecciones de esta misión es que se espera que para 2050 esta población supere el 85 %. O sea, que la población urbana sea más del 85 % de la población total.</p>
+
+<p><strong>Juan Montes:</strong> ¿Y cómo impacta el desarrollo urbano a las personas?</p>
+
+<p><strong>Redy Adolfo López:</strong> Lasciudades, al ser estos espacios donde se generan intercambios y mayor densidad de actividades, permiten también a su vez tener una mayor oferta de bienes y servicios que benefician a las personas. De hecho, muchos estudios lo muestran y cuando uno hace gráficas de correlación, uno lo que observa es que sí hay una relación positiva entre la urbanización y la mejora en la calidad de vida de las personas que viven en las ciudades.</p>
+
+<p>Aquí también yo creo que vale la pena mencionar que en este campo es muy importante la articulación de las políticas del gobierno en lo que tiene que ver en particular con sectores como vivienda, agua potable, saneamiento básico, transporte medioambiente, entre muchos otros, y también dentro de los nuevos esquemas de planeación del desarrollo que se promueven a partir de un proceso de ordenamiento del territorio. </p>
+
+<p>Entonces aquí lo que es importante que todos tengamos en cuenta es que el desarrollo urbano dejó de ser hace mucho tiempo un tema que solo se pensaba que lo dominaban o era competencia los arquitectos y ahora es un tema que debe ser abordado de forma multidisciplinaria. ¿Por qué? Porque hoy ya no solo hablamos solamente del urbanismo en términos de diseño, sino también del desarrollo urbano como una herramienta o una forma que busca aumentar, por ejemplo, niveles de competitividad y productividad en las ciudades, que busque que ellas mismas se fortalezcan, mejorar la calidad de vida, que se hable de equidad en las ciudades y también la promoción de desarrollo económico. </p>
+
+<p>Por eso es muy importante que en este campo se hable sobre todo de un tema multidisciplinario. No solamente se debe abordar la ciudad desde una manera multidisciplinaria, sino también intersectorial y, particularmente, desde lo que hacemos en la Dirección de Desarrollo Urbano, donde tenemos a cargo el diseño, la coordinación, el seguimiento y la evaluación de las políticas de desarrollo urbano, nos enfocamos sobre todo en dos sectores como son el de la vivienda y el de agua potable y saneamiento básico. </p>
+
+<p>Esto buscando el fin último de contribuir a mejorar estos procesos de planificación del ordenamiento y del desarrollo territorial a nivel nacional, pero enfocado específicamente en servicios públicos domiciliarios, que también lo que podemos ver es que son esenciales para mejorar la calidad de vida y que lo que uno ve con unas mediciones más sofisticadas es que el hecho de que en las ciudades los habitantes puedan tener acceso a bienes y servicios y, en particular, servicios públicos le genera un impacto muy fuerte en la reducción de pobreza.</p>
+
+<p><strong>Juan Montes: </strong>Parte de este enfoque tiene mucho que ver con el reciclaje.</p>
+
+<p><strong>Isabel Cristina Riveros: </strong>El reciclaje es una de las alternativas para pasar de un modelo lineal de producción a uno circular, en el que los residuos del consumo o de la producción se incorporan dentro de un mismo proceso o de un proceso diferente de insumos.</p>
+
+<p><strong>Juan Montes: </strong>Escuchamos a Isabel Cristina Riveros.</p>
+
+<p><strong>Isabel Cristina Riveros: </strong>Directora ejecutiva de la Cámara de la Industria de Pulpa, Papel y Cartón de la ANDI.</p>
+
+<p><strong>Juan Montes: </strong>La ANDI es a Asociación Nacional de Empresarios de Colombia, un gremio que representa a gran parte del sector privado.</p>
+
+<p><strong>Isabel Cristina Riveros: </strong>En este momento, lo que estamos haciendo es cambiar el modelo que tenemos de producción. Dentro de la agenda nacional se ha incorporado el tema de economía circular y es muy importante poder dejar ese modelo de consumir, tirar y rellenar los vertederos con residuos.</p>
+
+<p>Lo importante en este caso es que se puedan reincorporar esos residuos y que no entren a los residuos que van a acabar con la vida de esos rellenos sanitarios que hoy está bastante limitada. </p>
+
+<p>Un ejemplo del sector papelero es le reincorporación en 2021 de 832.000 toneladas de papel como materia prima para la fabricación de 1.310.000 toneladas de papel.</p>
+
+<p><strong>Juan Montes:</strong> En esto concuerda Redy López, del DNP.</p>
+
+<p><strong>Redy Adolfo López:</strong> Reciclar es clave porque en este momento nos permite o está contribuyendo a que nos movamos hacia un modelo de economía circular, como un enfoque de circularidad y nos alejemos un poco o nos aportemos del modelo tradicional que hemos venido manejando, que es el modelo lineal. </p>
+
+<p>Hoy en día lo que hacemos es comprar bienes, utilizarlos, consumirlos y desecharlos. Con el modelo circular, lo que básicamente se busca es la reutilización. Y con eso estamos alargando la vida útil de los recursos y los bienes, y así estamos también conservando recursos naturales, asegurando el abastecimiento de los recursos naturales en el largo plazo, reducimos la contaminación y estamos también contribuyendo a generar valor agregado en la economía. </p>
+
+<p>Y todo esto se puede lograr a partir del reciclaje. Entonces, también es muy importante porque, además de disminuir la presión del consumo sobre los recursos naturales, también uno puede hablar de que está contribuyendo con la generación de nuevos puestos de trabajo o también está alargando la vida útil de los rellenos sanitarios, de los lugares donde se disponen los residuos sólidos actualmente, porque se está disminuyendo la cantidad de residuos que terminan en estos en estos lugares.</p>
+
+<p>Y también uno puede mencionar que, a partir del reciclaje se está generando más conciencia, fomentando el consumo responsable. Esto se traduce en ahorros de dinero de agua, de energía y, finalmente, en la dependencia de los recursos naturales y también en los combustibles fósiles.</p>
+
+<p>Gracias a la población que se dedica a esta labor, a la población recicladora, es que se ha generado un aporte ambiental muy importante. Es un trabajo que se ha hecho de manera silenciosa, pero que lo que ha hecho es incorporar materiales al ciclo productivo, evitando que estos materiales terminen enterrados en cualquier lado y, a su vez, contribuyendo al ahorro de energía y agua, y también buscando o promoviendo la reducción en el número de árboles que se requieren para producir, por ejemplo, papel y cartón.</p>
+
+<p>Entonces, tal vez como quedó estipulado en el en el Conpes 3874, aquí lo que queremos es promover el desarrollo social y la formalización y mejoramiento de la calidad de vida de este grupo poblacional, del grupo reciclador, y particularmente en la prestación de la actividad de aprovechamiento de residuos sólidos y esto enmarcado en el servicio público de aseo.</p>
+
+<p>Al final del día, esto contribuye a la formalización de esta actividad. En 2020 se registraron en la Superintendencia de Servicios Públicos 37.673 recicladores de oficio, que están representados o agrupados en 435 prestadores. Aquí el reto de la formalización es grande, pero también es importante mencionar que se están dando los pasos necesarios desde la política de regulación para lograr este objetivo.</p>
+
+<p><strong>Juan Montes:</strong> Vemos que el reciclaje no solo tiene un impacto medioambiental, sino que también puede contribuir al desarrollo económico, como lo explica Nohra Padilla, que preside la Asociación Nacional de Recicladores de Colombia.</p>
+
+<p><strong>Nohra Padilla: </strong>El reciclaje les aporta a las grandes industrias en Colombia más o menos tres millones de toneladas de materias primas. Esto es una cantidad bastante importante. </p>
+
+<p>Colombia ha logrado unas metas de reciclaje bastante altas, precisamente porque hay industrias, a diferencia de otros países en el continente en donde no se ha desarrollado industria, no hay industria, papelera. Nosotros sí tenemos industria papelera, metalúrgica, vidriera, de plásticos, que se ha fortalecido de una manera importante. Entonces, el reciclaje le aporta el desarrollo y a la industria del país de una manera muy significativa porque suministra la materia prima recuperada para muchos de los productos que hoy estas industrias no solamente producen para el país, sino para exportar también.</p>
+
+<p><strong>Juan Montes: </strong>La interacción entre el DNP con otros actores como el sector privado y los recicladores es fundamental para fomentar y formalizar el reciclaje. Redy López nos comenta algunos de los avances llevados a cabo por la entidad.</p>
+
+<p><strong>Redy Adolfo López: </strong>Desde el DNP se ha trabajado en varias iniciativas, que en últimas lo que buscan es fomentar el reciclaje, poner el tema sobre la mesa, dignificar un poco esta labor que es tan importante. Entonces, tal vez para mencionar en 2016 expedimos un documento de política, el Conpes 3874, que denominamos la política nacional para la gestión integral de residuos sólidos, y cuyo objetivo es el de implementar la gestión integral de los residuos sólidos como una política nacional de interés social, económico, ambiental y sanitario que contribuya al fomento de la economía circular, al desarrollo sostenible, la adaptación y mitigación al cambio climático. </p>
+
+<p>De manera particular, lo que se quiso y se quiere es resaltar la labor del del reciclaje y de los recicladores dentro de la cadena de la gestión de los residuos y también apoyar la formalización de esta labor y la inclusión en el servicio público de aseo y adicionalmente que contribuya a posicionar el reciclaje como una actividad crucial, junto a las otras actividades que denominamos “de las dos R”: que son reducir y reutilizar, que al final contribuyen a minimizar el impacto de los residuos en el país.</p>
+
+<p>¿Por qué es importante esto? Porque actualmente en Colombia el 83 % de los residuos que se generan en las casas (residuos domiciliarios) se van a los rellenos sanitarios. Esto es un número importante y hoy en día también esto implica unos retos porque en 2020 nuestra tasa de reciclaje era más o menos del 13 % y lo que estamos buscando es que en 2030 logremos llegar a cerca de un 18% en nuestra tasa de reciclaje.</p>
+
+<p>Otro de los temas que vale la pena mencionar es una evaluación de política de reciclaje que se adelantó en 2020 y que básicamente lo que buscaba era determinar qué puntos de la cadena se deben mejorar y como las instituciones, de alguna manera, participamos en esa cadena y cómo debemos articularnos para lograr el objetivo esperado. </p>
+
+<p>Las recomendaciones de esta evaluación han sido insumo para promover algunos ajustes al esquema que está adelantando y liderando el Ministerio de Vivienda y también elaboramos un proyecto tipo ECA (Estación de Clasificación y Aprovechamiento de Residuos) que al final lo que buscaba era facilitar y promover un poco la inversión pública de nuestros territorios, de los municipios. ¿Por qué? Porque a través de los proyectos tipo, que es como una estandarización de proyectos, en particular lo que se busca en este caso es ahorrarles a los municipios el 70 % de los costos en etapa de preinversión y también generar ahorros en tiempos de hasta de cuatro meses en el tiempo en que se demoran estructurando estos proyectos. Estas Estaciones de Clasificación y Aprovechamiento son una infraestructura fundamental con la que deberían contar los municipios para promover la productividad de la cadena y aumentar la tasa de reciclaje. </p>
+
+<p>Finalmente, digamos aquí una cuña, lo que estamos a punto de publicar es una guía para separar adecuadamente los residuos sólidos más comunes y originados en los hogares y los lugares de trabajo. Esto es importante porque es como un mensaje unificado de gobierno cierto de cómo disponer adecuadamente los residuos sólidos y aquí vale la pena mencionar que este trabajo se ha adelantado de la mano con otras entidades del orden nacional como el Ministerio de Vivienda, el Ministerio de Ambiente, la Comisión de Regulación de Agua y Saneamiento Básico y la Superintendencia de Servicios Públicos. También en este trabajo han participado algunas otras entidades privadas.</p>
+
+<p><strong>Juan Montes: </strong>Y, desde la ANDI, esto es lo que nos comenta Isabel Riveros.</p>
+
+<p><strong>Isabel Cristina Riveros:</strong> Las empresas afiliadas a la ANDI incorporan más de dos millones de toneladas de residuos reciclables y yo creo que esto ya debe estar incluso más alto porque no solo tenemos un programa de posconsumo de envases y empaques, sino que también tenemos otros programas. </p>
+
+<p>Particularmente en residuos reciclables, estamos un poco más arriba de los dos millones. Trabajamos de la mano con los clientes para el desarrollo de empaques y envases con criterios de ecodiseño. Esto quiere decir crear soluciones de empaque en las que se usen de manera eficiente los recursos y no generar una caja de estándar, por ejemplo, de cartón que implique que esa caja va a cargar cualquier cosa, sino que está diseñada para cargar o rollos de papel higiénico o en otro caso productos más pesados como cerámicas. </p>
+
+<p>Dentro de las cosas que estamos trabajando en el corto plazo está la actualización de la guía de calidad de materiales reciclables de papel y cartón, incorporando las calidades de reciente uso como son los envases para bebidas y también se está trabajando en ampliar la capacidad de transformación de empaques y de fabricación de empaques en el país. Buscamos que haya cada vez mayor recuperación de papel para aprovecharlo y en otros temas que van de la mano de la gestión eficiente de recursos en la producción y apuntándole a la conversión hacia energías más sostenibles e incluso renovables.</p>
+
+<p><strong>Juan Montes: </strong>Ambas perspectivas, tanto la del sector público y como la del sector privado se ven materializadas en el día a día de los recicladores, como lo explica Nohra Padilla.</p>
+
+<p><strong>Nohra Padilla: </strong> En el caso específico del Departamento Nacional de Planeación, es importante que esté en conexión con los sectores porque las señales que desde allí se mandan en política pública son bastante detenidas en cuentas por los municipios.</p>
+
+<p>Entonces, si el Departamento Nacional de Planeación, que lidera muchas gestiones de desarrollo en el país, da señales de empoderamiento, da señales de fortalecimiento de determinados sectores, como en el caso del reciclaje, pues esas son señales que necesariamente los municipios acogen y empiezan a desarrollar.</p>
+
+<p>Si se hace una buena tarea desde allí, desde la planeación y de la proyección de cómo debería ser el servicio de aprovechamiento, desde el Departamento Nacional de Planeación, se enlazaría con otras medidas como la responsabilidad extendida y la economía circular, de la cual también han sido impulsores y eso ayudaría muchísimo a que mejore la visión en el país del sistema de reciclaje y aprovechamiento y, por supuesto, el mejoramiento sustancial de los servicios públicos en Colombia</p>
+
+<p><strong>Juan Montes: </strong>Hablar de desarrollo es hablar del futuro. ¿Cuáles son los retos con miras a la agenda 2030 para el Desarrollo Sostenible? Vamos con Isabel.</p>
+
+<p><strong>Isabel Cristina Riveros: </strong>Creo que es muy importante continuar avanzando en el ecodiseño, también la separación en la fuente, que esta tarea no quede solo en manos de los recicladores. Ellos en este momento hacen una labor excelente. Nosotros tenemos de las mejores calidades en residuos separados para aprovechamiento, o sea, son residuos que están limpios que están poco contaminados, pero también es importante que esto se convierta una responsabilidad de los usuarios del servicio público, no solamente de los recicladores y eso redundará en que haya mayor oferta de material para reciclar y obviamente disponibilidad para futuras generaciones.</p>
+
+<p>En materia de cambio climático es importante revisar aspectos como la conversión a fuentes alternativas de energía e implementar acciones de logística sostenible. El reciclaje es un proceso que implica una cadena de logística inversa, una cadena que por el transporte de materiales puede estar generando emisiones y que lo que podemos hacer es trabajar con los incentivos adecuados del gobierno que permitan que se haga esa implementación más pronto. Obviamente, estamos conscientes también de que el costo que tiene cambiar la flota de transporte del país es bastante alto.</p>
+
+<p><strong>Juan Montes:</strong> Y finalizamos con Redy.</p>
+
+<p><strong>Redy Adolfo López: </strong>Si uno tiene en cuenta lo que sucedió con la crisis derivada de la pandemia, que se ocasionó por el Covid-19, uno podría pensar que el hecho de que las personas estuvieran confinadas se relaciona con una reducción en el consumo y exposición de residuos por parte de los ciudadanos y en particular de de ciertos elementos, pero a su vez lo que uno observó es que se aumentó la demanda de elementos desechables y plásticos como los que se utilizan para los tapabocas, las jeringas, las muestras de virus, bolsas plásticas, etcétera. Entonces, ¿por qué este ejemplo? Porque aquí el reto, tal vez más importante, es el tema de la articulación de todas las entidades, que no son pocas, en torno al objetivo de reducir los residuos y que al final como le aporte al modelo o a este enfoque de economía circular con el propósito de mitigar los efectos del cambio climático. Aquí el reto es articulación. </p>
+
+<p>Otro tema muy importante es educación y pedagogía porque hay todavía una oportunidad muy grande de mejora y que genere un poco de conciencia en todos los habitantes de las ciudades de la importancia de reciclar y, justamente, para que podamos materializar este objetivo es importante contar con la ciudadanía, informarla, socializar todos los esfuerzos que dentro de las entidades públicas y también las privadas se están adelantando. Entonces, para resumir, lo importante: articulación y el tema de educación y pedagogía son claves.</p>
+
+<p><strong>Juan Montes:</strong> En este episodio de estreno de “De la D a la P” contamos con las intervenciones de Nohra Padilla, presidente de la Asociación Nacional de Recicladores de Colombia; Isabel Cristina Riveros, directora de la Cámara de la Industria de Pulpa, Papel y Cartón de la ANDI, y Redy Alfonso López, director de Desarrollo Urbano en el Departamento Nacional de Planeación.</p>
+
+<p>La producción del episodio fue hecha por Laura Escobar. Soy Juan Montes y los espero en una próxima entrega de “De la D a la P”, el abecé del DNP.</p>
+
+
+        </div>
+
+      </div>
+    </section>
+    <!-- Compartir -->
+    <section class="DNPContent-share">
+      <h2 class="DNPContent-share-title">Compartir</h2>
+      <div class="DNPContent-share-icons">
+        <a href="#" class="DNPContent-share-icons-item">
+          <img src="./assets/fb_icon.svg" alt="" class="DNPContent-share-icons-item-icon">
+        </a>
+        <a href="#" class="DNPContent-share-icons-item">
+          <img src="./assets/tw_icon.svg" alt="" class="DNPContent-share-icons-item-icon">
+        </a>
+        <a href="#" class="DNPContent-share-icons-item">
+          <img src="./assets/in_icon.svg" alt="" class="DNPContent-share-icons-item-icon">
+        </a>
+        <a href="#" class="DNPContent-share-icons-item">
+          <img src="./assets/wa_icon.svg" alt="" class="DNPContent-share-icons-item-icon">
+        </a>
+      </div>
+    </section>
+    <!-- FIN Compartir -->
+    <div class="DNPButtonscontainer DNPButtonscontainer-reverse">
+      <a href="#" class="DNPSimplebutton DNPSimplebutton-color">Regresar a la lista de episodios</a>
+    </div>
+  </div>
+  <!-- Sidebar -->
+  <aside class="DNPSidebar">
+    <!-- Componente de búsqueda -->
+    <div class="DNPSearch">
+      <div class="DNPSearch-item">
+        <label for="yearSearch" class="DNPSearch-item-label">Buscar por año</label>
+        <select name="year" id="yearSearch" class="DNPSearch-item-select">
+          <option disabled selected value></option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+        </select>
+      </div>
+      <div class="DNPSearch-item">
+        <label for="monthSearch" class="DNPSearch-item-label">Buscar por mes</label>
+        <select name="month" id="monthSearch" class="DNPSearch-item-select">
+          <option disabled selected value></option>
+          <option value="Enero">Enero</option>
+          <option value="Febrero">Febrero</option>
+          <option value="Marzo">Marzo</option>
+          <option value="Abril">Abril</option>
+          <option value="Mayo">Mayo</option>
+        </select>
+      </div>
+      <div class="DNPSearch-item">
+        <label for="keywordSearch" class="DNPSearch-item-label">Buscar por palabra clave</label>
+        <input type="text" name="keyword" id="keywordSearch" class="DNPSearch-item-input">
+      </div>
+      <div class="DNPButtonscontainer">
+        <button class="DNPSimplebutton DNPSimplebutton-color">Buscar</button>
+        <button class="DNPSimplebutton">Limpiar filtro</button>
+      </div>
+    </div>
+    <!-- FIN Componente de búsqueda -->
+    <div class="DNPRichtext">
+      <h2 class="DNPText-title DNPText-title-color2">Más contenido de audio</h2>
+      <h3 class="DNPText-simpletitle">Todos nuestros episodios</h3>
+      <iframe src="https://widget.spreaker.com/player?show_id=5465339&theme=light&playlist=show&cover_image_url=https%3A%2F%2Fd1bm3dmew779uf.cloudfront.net%2Fcover%2F7ffd455d17b4a139b576a1a0cc01b76f.jpg" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+    <!-- Ultimo contenido destacado en el home -->
+    <a href="#URL">
+      <img src="https://colaboracion.dnp.gov.co/CDT/PublishingImages/HomeDNP/publicaciones/Publicaciones%20Mision%20Internacionales.png" alt="" class="DNPImagefull">
+    </a>
+  </aside>
+  <!-- FIN Sidebar -->
+</main>
+
+
+  <!-- Footer -->
+  <footer class="DNPFooter" role="contentinfo">
+    <div class="DNPFooter-info">
+      <div class="DNPFooter-info-container">
+        <h2 class="hidden">Pié de página - Más del DNP</h2>
+        <h3 class="DNPFooter-info-title">Departamento Nacional de Planeación</h3>
+        <div class="DNPFooter-info-logos">
+          <img src="https://www.dnp.gov.co/estilos/images/logoNuevo.jpg" alt="Logo Departamento Nacional de Planeación" class="DNPFooter-info-logos-element">
+          <a href="http://" target="_blank" rel="noopener noreferrer" aria-label="Ir a La Rebeca">
+            <img src="./assets/boton_la_rebeca.svg" alt="Logo La Rebeca" class="DNPFooter-info-logos-element">
+          </a>
+        </div>
+        <div class="DNPFooter-info-data">
+          <h4 class="DNPFooter-info-data-title">Sede principal</h4>
+          <p class="DNPFooter-info-data-text">Dirección: Calle 26 # 13-19 - Edificio ENTerritorio / Bogotá D.C., Colombia</p>
+          <p class="DNPFooter-info-data-text">Código Postal: 110311</p>
+          <p class="DNPFooter-info-data-text">Horario de Atención: Lunes a viernes 8:00 a.m. a 4:30 p.m. jornada continua</p>
+          <p class="DNPFooter-info-data-text">Teléfono Conmutador: +57 (1) 381 50 00</p>
+          <p class="DNPFooter-info-data-text">Línea Gratuita: 01 8000 12 12 21</p>
+          <p class="DNPFooter-info-data-text">Buzón de notificaciones DNP: notificacionesjudiciales@dnp.gov.co</p>
+          <p class="DNPFooter-info-data-text"></p>
+        </div>
+        <div class="DNPFooter-info-social">
+          <a href="https://twitter.com/DNP_Colombia" class="DNPFooter-info-social-element tw">@DNP_Colombia</a>
+          <a href="https://www.instagram.com/dnp_colombia/" target="_blank" class="DNPFooter-info-social-element ig">@dnp_colombia</a>
+          <a href="https://www.facebook.com/departamentonacionaldeplaneacion/" target="_blank" class="DNPFooter-info-social-element fb">@DNPColombia</a>
+          <a href="https://www.youtube.com/channel/UCx25Fx8FD1URCYzlGVyLZ0w" target="_blank" class="DNPFooter-info-social-element yt">DNP Colombia</a>
+          <a href="https://www.linkedin.com/company/departamento-nacional-de-planeacion/" target="_blank" class="DNPFooter-info-social-element in">Departamento Nacional de Planeación</a>
+        </div>
+        <div class="DNPFooter-info-social">
+          <a href="/Politica-de-seguridad/#terminos-y-condiciones" class="DNPFooter-info-social-link">Terminos y condiciones</a>
+          <a href="/Politica-de-seguridad/#politica-de-privacidad" class="DNPFooter-info-social-link">Política de privadicad</a>
+          <a href="/Politica-de-seguridad/#politica-derechos-de-autor" class="DNPFooter-info-social-link">Política de derechos de autor</a>
+          <a href="/mapa-del-sitio" class="DNPFooter-info-social-link">Mapa del sitio</a>
+          <!--<a href="/Accesibilidad" class="DNPFooter-info-social-link">Accesibilidad</a>!-->
+          <a href="/_layouts/15/Authenticate.aspx" class="DNPFooter-info-social-link">Inicio de sesión</a>
+          <a href="https://portal.microsoftonline.com/" class="DNPFooter-info-social-link" target="_blank">Correo institucional</a>
+        </div>
+      </div>
+    </div>
+    <div class="DNPFooter-bar">
+      <div class="DNPFooter-bar-container">
+        <img src="./assets/colombia_co.png" alt="Logo Marca Colombia" class="DNPFooter-bar-logo border">
+        <a href="https://www.gov.co/" target="_blank">
+          <img src="./assets/logo_govco.svg" alt="Logo Gov.co" class="DNPFooter-bar-logo">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- FIN Footer -->
+  <!-- Botón Volver arriba -->
+  <button class="DNPUp" id="DNPUp" onclick="DNPscroll('DNPheader');">
+    <img src="./assets/up-button.svg" alt="Flecha hacia arriba" class="DNPUp-icon">
+    <p class="DNPUp-text">Volver arriba</p>
+  </button>
+  <!-- FIN Botón Volver arriba -->
+  <script type="text/javascript" src="./js/dnp_scripts.js"></script>
+
+
+
+  <!--Llamados de desarrollo-->
+  <section id="app"></section>
+  <script type="text/javascript" src="./modules.js"></script>
+  <script type="text/javascript" src="http://localhost:9000/js/app.js"></script>
+  <!--FIN Llamados de desarrollo-->
+
+</body>
+</html>
